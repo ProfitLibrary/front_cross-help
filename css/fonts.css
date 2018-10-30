@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Montserrat Light";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat Light"), local("MontserratLight"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Medium"), local("MontserratMedium"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Montserrat Bold"), local("MontserratBold"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("MontserratSemiBold"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Myriad Pro Regular"), local("MyriadProRegular"), url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Agency FB";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Agency FB"), local("AgencyFB"), url("../fonts/agency-fb.woff2") format("woff2"), url("../fonts/agency-fb.woff") format("woff");
+}
+@font-face {
+  font-family: 'Adi_Script';
+  src: url('../fonts/Adi_Script.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
