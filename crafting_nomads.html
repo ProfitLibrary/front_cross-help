@@ -62,8 +62,8 @@
 				<span class="crafting_definition__span--popularity">139/17</span> - показатель популярности на рынке (предложение / спрос).
 			</p>
 		</div>
-	<div class="fraction_content">
-		<table class="fraction_table" id="fraction_table_sorter"> 
+	<div class="fraction_content fraction_content--crafting">
+		<table class="fraction_table fraction_table--crafting" id="fraction_table_sorter"> 
 			<thead class="fraction_table__thead fraction_table__thead--crafting">
 				<th data-name="name" class="fraction_thead"><a class="fraction_table__a fraction_table__a--name "><p>Наименование</p><button class="thead_button thead_button--active"></button></a></th>
 				<th data-name="Sell_Price" class="fraction_thead"><a class="fraction_table__a fraction_table__a--buy"><p>Цена покупки</p><button class="thead_button"></button></a></th>
@@ -74,91 +74,189 @@
 			</thead>
 
 			<tbody id="target">
-				<tr class="fraction_table__item items_color items_color__common" data-cat="Resources" data-color="Сommon" data-fraction="">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_1.png">
-						<div class="td_name_text"><div class="name_color_white">Металлом</div>
-						<div class="descripton_color">ресурс</div></div>
-					</td>  
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">3</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-				</tr>
 
-				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_3.png">
-						<div class="td_name_text"><div class="name_color_brown">Гелиос</div>
-						<div class="descripton_color">оружие</div></div>
-					</td>
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">3</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-				</tr>
-
-				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_4.png">
-						<div class="td_name_text"><div class="name_color_violet">Бигфут</div>
-						<div class="descripton_color">колесо</div></div>
-					</td>
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">29.87</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-				</tr>
- 
-				<tr class="fraction_table__item items_color" data-cat="Customization" data-color="Сommon" data-fraction="">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_6.png">
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
-							<div class="name_color_white">NAME</div>
-							<div class="descripton_color">Внешний вид</div>
+							<div class="name_color_white">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
 						</div>
-					</td>
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">29.87</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
 				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_7.png">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
-							<div class="name_color_blue">Крепыш</div>
-							<div class="descripton_color">кабина</div>
+							<div class="name_color_white">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
 						</div>
-					</td>
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">29.87</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					</td>  
+					<td class="name" data-name="name"><span>322.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>452.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">522.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+122.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">272.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+232</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__relic" data-cat="Weapons" data-color="Relic" data-fraction="Engineers">
-					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_8.png">
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
-							<div class="name_color_orange">Скорпион</div>
-							<div class="descripton_color">оружие</div>
+							<div class="name_color_white">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
 						</div>
-					</td>
-					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Buy_Orders">5</td>
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td data-name="Sell_Offers">29.87</td> 
-					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					</td>  
+					<td class="name" data-name="name"><span>3.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>4.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">5.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+2.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">7.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+3</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">Авто-пушка</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">Авто-пушка</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">Авто-пушка</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-red.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-gold.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-gold.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_white">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/crafting/table_ico/icon-box-mini.png" alt="" class="td_name_text__icon_box">
+								<img src="image/crafting/table_ico/icon-money-mini-gold.png" alt="" class="td_name_text__icon_money">
+								<div class="td_name_text__popularity">258/70</div>
+							</div>
+						</div>
+					</td>  
+					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 			</tbody>
 		</table>
+		<img class="Line_decoration_table" src="image/crafting/Line-decoration-gorizontal-2.png" alt="">
 </main>
 <footer class="footer">
 	<div class="footer_last__content">
