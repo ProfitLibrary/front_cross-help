@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>  
+	<meta charset="UTF-8">
+	<title>Главная</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css"> 
+</head>
+<body class="main">
+<header class="main_header header_background__nomads--ru" name="top">
+<a class="header_logo_a header_logo_a--mini" href="index.html"><div class="main_header__logo--mini"></div></a>
+ </header>
+<main class="content"> 
+	<nav class="main_menu">
+		<ul class="main_menu__ul">
+			<a class="main_menu__a" href=""> <li class="menu_button">Фарм монет</li></a>
+			<a class="main_menu__a" href="market.html"><li class="menu_button">Цены товаров</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Обмен значков</li></a>
+			<a class="main_menu__a main_menu__a--active" href="crafting.html"><li class="menu_button menu_button--active"> Крафт деталей</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Выгодный набор</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Доп. материалы</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Турниры</li></a>
+			<!-- <a class="main_menu__a" href=""><li class="menu_button"> Выгодный набор</li></a>
+			<a class="main_menu__a tourney" href=""><li class="menu_button "> Турнир</li></a>
+			<a class="main_menu__a top" href=""><li class="menu_button "> Топ кланов</li></a> -->
+		</ul> 
+	</nav>    
+
+	<div class="main_fraction"> 
+		<ul class="fraction_menu"> 
+			<a class="button_a"><li class="fraction_menu__button fraction_menu__button--ivet">Ивент</li></a>
+			<a class="button_a"><li data='Engineers' class="fraction_menu__button">Механики</li></a>
+			<a class="button_a"><li data='Lunatics' class="fraction_menu__button">Бешеные</li></a>
+			<a class="button_a button_a--active"><li data='Nomads' class="fraction_menu__button active">Скитальцы</li></a>
+			<a class="button_a"><li data='Scavanger' class="fraction_menu__button">Мусорщики</li></a>
+			<a class="button_a"><li data='Steppenwolfs' class="fraction_menu__button fraction_menu__button--two">Степные волки</li></a>
+			<a class="button_a"><li data="DawnsChildren" class="fraction_menu__button fraction_menu__button--two">Дети рассвета</li></a>
+			<a class="button_a"><li data='Firestarters' class="fraction_menu__button fraction_menu__button--last">Огнепоклонники</li></a> 
+		</ul> 
+
+	<div class="fraction fraction--crafting"> 
+		<div class="fraction_menu__footline"></div>	 
+		<div class="crafting_definition">
+			<h2 class="crafting_definition__title">Себестоимость крафта  расчитана с учетом затрат на станки фракции по стандатной стоимости.</h2>
+			<p class="crafting_definition__text_icon">
+				<span class="crafting_definition__icon--money_mini_gold"></span> - деталь выгодно крафтить на продажу.
+			</p>
+			<p class="crafting_definition__text_icon">
+				<span class="crafting_definition__icon--money_mini_red"></span> - деталь не выгодно крафтить для продажи.
+			</p>
+			<p class="crafting_definition__text_icon">
+				<span class="crafting_definition__icon--box-mini"></span> - рыночная цена ниже себестоимости крафта. Выгоднее купить чем cкрафтить.
+			</p>
+			<p class="crafting_definition__text">
+				<span class="crafting_definition__span--blue">Себестоимость</span> - себестоимость и выгода с учетом крафта всех предметов для рецепта.
+			</p>
+			<p class="crafting_definition__text">
+				<span class="crafting_definition__span--orange">Себестоимость</span> - себестоимость и выгода с учетом крафта всех предметов для рецепта.
+			</p>
+			<p class="crafting_definition__text crafting_definition__text--last">
+				<span class="crafting_definition__span--popularity">139/17</span> - показатель популярности на рынке (предложение / спрос).
+			</p>
+		</div>
+	<div class="fraction_content">
+		<table class="fraction_table" id="fraction_table_sorter"> 
+			<thead class="fraction_table__thead fraction_table__thead--crafting">
+				<th data-name="name" class="fraction_thead"><a class="fraction_table__a fraction_table__a--name "><p>Наименование</p><button class="thead_button thead_button--active"></button></a></th>
+				<th data-name="Sell_Price" class="fraction_thead"><a class="fraction_table__a fraction_table__a--buy"><p>Цена покупки</p><button class="thead_button"></button></a></th>
+				<th data-name="Buy_Price" class="fraction_thead"><a class="fraction_table__a fraction_table__a--sale1"><p>Цена продажи</p><button class="thead_button"></button></a></th>
+				<th data-name="Buy_Orders" class="fraction_thead"><a class="fraction_table__a fraction_table__a--price1"><p>Себестоимость</p><button class="thead_button"></button></a></th><th data-name="Margin"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--sale2"><p>Продажа</p><button class="thead_button"></button></a></th>
+				<th data-name="Margin"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--price2"><p>Себестоимость</p><button class="thead_button"></button></a></th>
+				<th data-name="Margin"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--sale3"><p>Продажа</p><button class="thead_button"></button></a></th>
+			</thead>
+
+			<tbody id="target">
+				<tr class="fraction_table__item items_color items_color__common" data-cat="Resources" data-color="Сommon" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_1.png">
+						<div class="td_name_text"><div class="name_color_white">Металлом</div>
+						<div class="descripton_color">ресурс</div></div>
+					</td>  
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">3</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_3.png">
+						<div class="td_name_text"><div class="name_color_brown">Гелиос</div>
+						<div class="descripton_color">оружие</div></div>
+					</td>
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">3</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_4.png">
+						<div class="td_name_text"><div class="name_color_violet">Бигфут</div>
+						<div class="descripton_color">колесо</div></div>
+					</td>
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">29.87</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+ 
+				<tr class="fraction_table__item items_color" data-cat="Customization" data-color="Сommon" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_6.png">
+						<div class="td_name_text">
+							<div class="name_color_white">NAME</div>
+							<div class="descripton_color">Внешний вид</div>
+						</div>
+					</td>
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">29.87</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_7.png">
+						<div class="td_name_text">
+							<div class="name_color_blue">Крепыш</div>
+							<div class="descripton_color">кабина</div>
+						</div>
+					</td>
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">29.87</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__relic" data-cat="Weapons" data-color="Relic" data-fraction="Engineers">
+					<td class="td_name"><img class="foto_tovara" src="image/tovar/tovar_8.png">
+						<div class="td_name_text">
+							<div class="name_color_orange">Скорпион</div>
+							<div class="descripton_color">оружие</div>
+						</div>
+					</td>
+					<td data-name="Sell_Price"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Price"><span>12345.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Buy_Orders">5</td>
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td data-name="Sell_Offers">29.87</td> 
+					<td data-name="Margin"><span>123</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+			</tbody>
+		</table>
+</main>
+<footer class="footer">
+	<div class="footer_last__content">
+	<div class="footer_top">
+		<div class="footer_top__news"><a class="footer_top__news_a name_color_browen" href="">Новости</a>
+		<a class="footer_top__news_a" href="">Информация по обновлению<br>Crossout 0.9.130</a><a class="footer_top__news_a " href="">Вопросы и ответы</a></div>
+		<div class="footer_top__help"><a class="footer_top__help_a name_color_browen" href="">Поддержка</a>
+		<a class="footer_top__help_a" href="">Поддержать проект</a>
+		<a class="footer_top__help_a" href="">Сотрудничество</a>
+		<a class="footer_top__help_a" href="">О нас</a>
+	</div>
+		<div class="footer_top__soc_icon">
+		<a href=""><div class="soc_icon_U"></div></a>	
+			<a href=""><div class="soc_icon_U1"></div></a>	
+			<a href=""><div class="soc_icon_U2"></div></a>	
+		</div>
+	</div>	
+	<div class="footer_main_bottom"><div class="footer_bootom">
+		<div class="footer_text"> Last update</div>
+		<div class="footer_bootom_vijet">
+			
+			<div class="vijet_data"> 
+			<div class="data">05.10.2018</div>
+			<div class="time">22:32:41</div>
+		</div>
+		</div>
+		<div class="footer_pravo">© 2018  Все содержание, включая идеи оформления и стиль, являются объектом авторского права.<br> 
+Права на изображения пренадлежат Gaijin Entertaiment. Создано при поддержке игрового сообщества Uran Expres</div>
+	</div>	
+	<div class="footer_foto">
+		<div class="foto1"></div>
+		<div class="foto2"></div>
+		<div class="foto3"></div>
+	</div>
+
+		<div>
+<a href="#top"><button class="button_top"></button></a>
+</footer>
+<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">  -->
+<!-- <script src="js/filterTable.v1.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/sort.js"></script>
+<script src="js/script.js"></script> -->
+
+
+<!--<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+ 
+ <!-- <script>
+ $(document).ready(function() {
+    $('#fraction_table_sorter').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+ </script> -->
+</body>
+</html>
