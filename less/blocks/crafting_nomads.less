@@ -78,6 +78,7 @@
 		color: #d8c78a;
 		font-size: 0.833vw;
 		font-weight: 400;
+		line-height: 1.771vw;
 	}
 }
 .fraction--crafting{
@@ -85,6 +86,7 @@
 }
 .fraction_table__thead--crafting{
 	tr{
+		width: 64.063vw;
 		justify-content: flex-start;
 	}
 	.fraction_thead{
@@ -141,21 +143,24 @@
 .fraction_table--crafting {
 	position: relative;
   width: 100%;
-  margin-top: 0.27vw;
-	// padding-bottom: 11.615vw;
   border-spacing: 0 0.521vw;
   .bg_table{
   	position: absolute;
   	bottom: 0;
   }
 }
+.fraction_content--crafting{
+	width: 64.063vw;
+}
 .fraction_content--crafting .fraction_table__item{
+	position: relative;
+	width: 64.063vw;
 	td{
 		justify-content: flex-end;
 		font-size: 0.833vw;
 	}
 	.name{
-		width: 7vw;
+		width: 6vw;
 	}
 	.price1{
 		width: 11vw;
@@ -168,11 +173,15 @@
 		margin-right: 2.5vw;
 	}
 	.td_name{
-		width: 22vw;
+		width: 23vw;
 	}
 	.td_name .foto_tovara{
+		position: absolute;
+		top: 0;
+		left: 0;
+		top: 0;
 		width: 3.75vw;
-		height: 3.75vw;
+		height: 3.64vw;
 		max-width: none;
 		max-height: none;
 	}
@@ -181,7 +190,7 @@
 		line-height: 1.667vw;
 		.descripton_color{
 			padding-right: 0.208vw;
-			font-size: 0.938vw;
+			font-size: 1.042vw;
 		}
 		.td_name_text__popularity{
 			color: #d8c78a;
@@ -189,12 +198,18 @@
 		}
 	}
 	.td_name_text{
-		font-size: 0.938vw;
-	}
-	.td_name_text img{
+		margin-left: 4.792vw;
+		font-size: 1.094vw;
+		img{
 			width: 1.823vw;
 			height: 1.823vw;
 			margin-right: 0.208vw;
+		}
+		.td_name_text__icon_money{
+			margin-top: 0.2vw;
+			width: 1.458vw;
+			height: 1.458vw;
+		}
 	}
 	.sale1__text{
 		color: #c3cdfb;
