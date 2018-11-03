@@ -86,60 +86,66 @@
 }
 .fraction_table__thead--crafting{
 	tr{
+		display: block;
 		width: 64.063vw;
-		justify-content: flex-start;
+		th{
+			padding-top: 0.521vw;
+			float: left;
+		}
 	}
 	.fraction_thead{
 		width: auto;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.fraction_table__a{
-		button{
-			width: 0.833vw;
-    	height: 0.521vw;
-    	//width: 1.146vw;
-    	// height: 0.833vw;
-			padding: 0;
-		}
 		p{
 			padding: 0;
 		}
-		&--name p{
-			width: 6.51vw;
-			margin-left: 0.781vw;
-			margin-right: 4.271vw;
+		button{
+			width: 1.2vw;
+    	height: 0.8vw;
+    	margin-left: 0.417vw;
+			padding: 0;
 		}
-		&--buy p{
-			width: 3.542vw;
-			margin-left: 6.615vw;
-			margin-right: 0.469vw;
+		&--name{
+			width: 13vw;
+			margin-right: 6.667vw; 
+			button{
+				margin-left: 4.271vw;
+			}
 		}
-		&--sale1 p{
-			width: 3.802vw;
-			margin-left: 3.438vw;
-			margin-right: 0.365vw;
+		&--buy{
+			margin-right: 2.708vw;
+			p{
+				width:  3.7vw;
+			}
+			button{
+				margin: 0;
+			}
 		}
-		&--price1 p{
-			width: 6.615vw;
-			margin-left: 1.51vw;
-			margin-right: 0.625vw;
+		&--sale1{
+			margin-right: 0.99vw;
+			p{
+				width:  3.7vw;
+			}
+		}
+		&--price1{
+			width:  8.2vw;
+			margin-right: 0.4vw;
 			color: #c3cdfb;
 		}
-		&--sale2 p{
-			width: 3.854vw;
-			margin-left: 0.677vw;
-			margin-right: 0.365vw;
+		&--sale2{
+			width:  6vw;
+			margin-right: 0.521vw;
 			color: #c3cdfb;
 		}
-		&--price2 p{
-			width: 6.615vw;
-			margin-left: 1.146vw;
-			margin-right: 0.625vw;
+		&--price2{
+			width:  8.2vw;
+			margin-right: 0.521vw;
 			color: #fbc498;
 		}
-		&--sale3 p{
-			width: 3.854vw;
-			margin-left: 0.625vw;
-			margin-right: 0.417vw;
+		&--sale3{
 			color: #fbc498;
 		}
 	}
@@ -159,6 +165,7 @@
 .fraction_content--crafting .fraction_table__item{
 	position: relative;
 	width: 64.063vw;
+	height: 3.63vw;
 	td{
 		justify-content: flex-end;
 		font-size: 0.833vw;
@@ -170,12 +177,16 @@
 		width: 6vw;
 	}
 	.sale1{
+		box-sizing: border-box;
+		padding-right: 1vw;
 		width: 9vw;
 	}
 	.price1{
 		width: 11vw;
 	}
 	.price2{
+		box-sizing: border-box;
+		padding-right: 1.667vw;
 		width: 8.698vw;
 		text-align: center;
 	}
@@ -197,8 +208,9 @@
 	}
 	.td_name_text__wrap{
 		display: flex;
+		align-items: center;
 		font-weight: 300;
-		line-height: 1.667vw;
+		line-height: 0.8vw;
 		.descripton_color{
 			padding-right: 0.208vw;
 			font-size: 1.042vw;
@@ -212,6 +224,7 @@
 		margin-left: 4.792vw;
 		font-size: 1.094vw;
 		font-weight: 500;
+		line-height: 1vw;
 		img{
 			width: 1.823vw;
 			height: 1.823vw;

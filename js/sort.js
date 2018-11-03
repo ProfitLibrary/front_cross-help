@@ -6,10 +6,10 @@ $(document).ready(function(){
 	});
 	function sort(first){
 		var pagin_count = $('select[name="list1"]').val(); 
-		var pagin_pos = ($('ul.pagin_ul>li.active').lengdiv==0)?1:$('ul.pagin_ul>li.active').html(); 
-		var category = $('ul.menu_category>a>li.active>input').adiviv('name');
-		var color = $('ul.menu_rar>a>li.active>input').adiviv('name');
-		var div_elem = $('div.fraction_table__item');
+		var pagin_pos = ($('ul.pagin_ul>li.active').length==0)?1:$('ul.pagin_ul>li.active').html(); 
+		var category = $('ul.menu_category>a>li.active>input').attr('name');
+		var color = $('ul.menu_rar>a>li.active>input').attr('name');
+		var tr_elem = $('tr.fraction_table__item');
 		var search_input = $('input#regexp');
 		
 		function getUrlVars(){
@@ -21,20 +21,20 @@ $(document).ready(function(){
 		}
 		
 		function setUrl(url_param){ 
-			var sdiv = ''; 
+			var str = ''; 
 			for(var i in url_param){
-				if(url_param[i].lengdiv>0 && url_param[i]!=''){
+				if(url_param[i].length>0 && url_param[i]!=''){
 					url_param[i] = url_param[i].filter(function(n){ return n != undefined });
 					url_param[i] = url_param[i].filter(function(n){ return n != '' });
-					if(sdiv==''){
-						sdiv = i + '=' +url_param[i].join(',');
+					if(str==''){
+						str = i + '=' +url_param[i].join(',');
 					} else {
-						sdiv = sdiv + '&' + i + '='+url_param[i].join(',');
+						str = str + '&' + i + '='+url_param[i].join(',');
 					}				
 				}				
 			}
-			if(sdiv!=''){
-				location.href = '#' + sdiv;
+			if(str!=''){
+				location.href = '#' + str;
 			} else {
 				location.href = '#index';
 			}
@@ -71,25 +71,25 @@ $(document).ready(function(){
 			}
 			//конец получения списка со строки url
 		}
-		if($('ul.fraction_menu>a.button_a--active').lengdiv>0){
+		if($('ul.fraction_menu>a.button_a--active').length>0){
 			tttt++;
 			$('ul.fraction_menu>a.button_a--active').each(function(){
-				var t =($(divis).find('li.fraction_menu__button--vse').lengdiv==1)?'':frak.push('[data-fraction='+$(divis).find('li').adiviv('data')+']');
-				url['Fractions'].push($(divis).find('li').adiviv('data'));
+				var t =($(this).find('li.fraction_menu__button--vse').length==1)?'':frak.push('[data-fraction='+$(this).find('li').attr('data')+']');
+				url['Fractions'].push($(this).find('li').attr('data'));
 			});			
 		}
-		if($('ul.menu_rar>a>li.active').lengdiv>0){
+		if($('ul.menu_rar>a>li.active').length>0){
 			tttt++;
 			$('ul.menu_rar>a>li.active').each(function(){
-				color.push('[data-color='+$(divis).find('input').val()+']');
-				url['Color'].push($(divis).find('input').val());
+				color.push('[data-color='+$(this).find('input').val()+']');
+				url['Color'].push($(this).find('input').val());
 			});			
 		}
-		if($('ul.menu_category>a>li.active').lengdiv>0){
+		if($('ul.menu_category>a>li.active').length>0){
 			tttt++;
 			$('ul.menu_category>a>li.active').each(function(){
-				var t =($(divis).find('input').val()=='All')?'':cats.push('[data-cat'+'='+$(divis).find('input').val()+']');		
-				if($(divis).find('input').val()!='All')url['Category'].push($(divis).find('input').val());				
+				var t =($(this).find('input').val()=='All')?'':cats.push('[data-cat'+'='+$(this).find('input').val()+']');		
+				if($(this).find('input').val()!='All')url['Category'].push($(this).find('input').val());				
 			});			
 		}
 		if(search_input.val()!=''){
@@ -97,56 +97,56 @@ $(document).ready(function(){
 			search.push(':Сontains("'+search_input.val()+'")');
 			url['Search'].push(search_input.val());
 		}
-		var elem = div_elem;
-		var sdiv1 ='';
+		var elem = tr_elem;
+		var str1 ='';
 		if(tttt>0){
-			if(search.lengdiv>0) elem = $(elem).filter(search[0]); console.log(cats);
+			if(search.length>0) elem = $(elem).filter(search[0]); console.log(cats);
 			for(var t in cats){
-				if(sdiv1==""){
-					sdiv1=cats[t];
+				if(str1==""){
+					str1=cats[t];
 				} else {
-					sdiv1=sdiv1+', '+cats[t];
+					str1=str1+', '+cats[t];
 				}
 			}
-			if(sdiv1!=""){ 
-				elem = $(elem).filter(sdiv1);
+			if(str1!=""){ 
+				elem = $(elem).filter(str1);
 			}
-			sdiv1='';
+			str1='';
 			for(var t in frak){
-				if(sdiv1==""){
-					sdiv1=frak[t];
+				if(str1==""){
+					str1=frak[t];
 				} else {
-					sdiv1=sdiv1+', '+frak[t];
+					str1=str1+', '+frak[t];
 				}
 			}
-			if(sdiv1!=""){ 
-				elem = $(elem).filter(sdiv1);
+			if(str1!=""){ 
+				elem = $(elem).filter(str1);
 			}
-			sdiv1='';
+			str1='';
 			for(var t in color){
-				if(sdiv1==""){
-					sdiv1=color[t];
+				if(str1==""){
+					str1=color[t];
 				} else {
-					sdiv1=sdiv1+', '+color[t];
+					str1=str1+', '+color[t];
 				}
 			}
-			if(sdiv1!=""){ 
-				elem = $(elem).filter(sdiv1);
+			if(str1!=""){ 
+				elem = $(elem).filter(str1);
 			}
 		}
 		
 		render(elem,pagin_count,pagin_pos);
 		setUrl(url);
 		function render(elem,limit,offset){
-			$('div.fraction_table__item').hide();
+			$('tr.fraction_table__item').hide();
 			$(elem).each(function(i){ 
 				if(i<(limit*offset) && i>=(limit*offset)-limit){
-					$(divis).show();					
+					$(this).show();					
 				} else {
-					$(divis).hide();	
+					$(this).hide();	
 				}
 			});
-			var pp = Madiv.ceil(elem.lengdiv/limit); console.log(pp);
+			var pp = Math.ceil(elem.length/limit); console.log(pp);
 			var rt = 5;
 			
 			$('ul.pagin_ul').html('');	
@@ -187,19 +187,19 @@ $(document).ready(function(){
 			}
 			$('body').find('ul.pagin_ul>li').on('click',function(){
 				$('body').find('ul.pagin_ul>li').removeClass('active');
-				$(divis).addClass('active');
+				$(this).addClass('active');
 				sort();
 			});
 		}
 	}
-	$('div.fraction_divead[data-name="name"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				var an = $(a).find('.div_name>div.div_name_text>div').html();
-				var bn = $(b).find('.div_name>div.div_name_text>div').html();
+	$('th.fraction_thead[data-name="name"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				var an = $(a).find('.td_name>div.td_name_text>div').html();
+				var bn = $(b).find('.td_name>div.td_name_text>div').html();
 				if (an && bn) {
 					return bn.toUpperCase().localeCompare(an.toUpperCase());
 				}
@@ -208,10 +208,10 @@ $(document).ready(function(){
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				var an = $(b).find('.div_name>div.div_name_text>div').html();
-				var bn = $(a).find('.div_name>div.div_name_text>div').html();
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				var an = $(b).find('.td_name>div.td_name_text>div').html();
+				var bn = $(a).find('.td_name>div.td_name_text>div').html();
 				if (an && bn) {
 					return bn.toUpperCase().localeCompare(an.toUpperCase());
 				}
@@ -221,96 +221,96 @@ $(document).ready(function(){
 			sort();
 		}
 	});
-	$('div.fraction_divead[data-name="Sell_Price"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(b).find('div[data-name="Sell_Price"]>span').html()) - parseFloat($(a).find('div[data-name="Sell_Price"]>span').html());		
+	$('th.fraction_thead[data-name="Sell_Price"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(b).find('td[data-name="Sell_Price"]>span').html()) - parseFloat($(a).find('td[data-name="Sell_Price"]>span').html());		
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(a).find('div[data-name="Sell_Price"]>span').html()) - parseFloat($(b).find('div[data-name="Sell_Price"]>span').html());			
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(a).find('td[data-name="Sell_Price"]>span').html()) - parseFloat($(b).find('td[data-name="Sell_Price"]>span').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		}
 	});
-	$('div.fraction_divead[data-name="Buy_Price"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(b).find('div[data-name="Buy_Price"]>span').html()) - parseFloat($(a).find('div[data-name="Buy_Price"]>span').html());		
+	$('th.fraction_thead[data-name="Buy_Price"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(b).find('td[data-name="Buy_Price"]>span').html()) - parseFloat($(a).find('td[data-name="Buy_Price"]>span').html());		
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(a).find('div[data-name="Buy_Price"]>span').html()) - parseFloat($(b).find('div[data-name="Buy_Price"]>span').html());			
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(a).find('td[data-name="Buy_Price"]>span').html()) - parseFloat($(b).find('td[data-name="Buy_Price"]>span').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		}
 	});
-	$('div.fraction_divead[data-name="Margin"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(b).find('div[data-name="Margin"]>span').html()) - parseFloat($(a).find('div[data-name="Margin"]>span').html());		
+	$('th.fraction_thead[data-name="Margin"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(b).find('td[data-name="Margin"]>span').html()) - parseFloat($(a).find('td[data-name="Margin"]>span').html());		
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(a).find('div[data-name="Margin"]>span').html()) - parseFloat($(b).find('div[data-name="Margin"]>span').html());			
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(a).find('td[data-name="Margin"]>span').html()) - parseFloat($(b).find('td[data-name="Margin"]>span').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		}
 	});
-	$('div.fraction_divead[data-name="Sell_Offers"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseInt($(b).find('div[data-name="Sell_Offers"]').html()) - parseInt($(a).find('div[data-name="Sell_Offers"]').html());		
+	$('th.fraction_thead[data-name="Sell_Offers"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseInt($(b).find('td[data-name="Sell_Offers"]').html()) - parseInt($(a).find('td[data-name="Sell_Offers"]').html());		
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseInt($(a).find('div[data-name="Sell_Offers"]').html()) - parseInt($(b).find('div[data-name="Sell_Offers"]').html());			
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseInt($(a).find('td[data-name="Sell_Offers"]').html()) - parseInt($(b).find('td[data-name="Sell_Offers"]').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		}
 	});
-	$('div.fraction_divead[data-name="Buy_Orders"]').click(function(){
-		$('div.fraction_divead>a').removeClass('fraction_table__a--active');
-		$(divis).find('a').addClass('fraction_table__a--active');
-		if($(divis).find('button').hasClass('divead_button--active')){
-			$(divis).find('button').removeClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseInt($(b).find('div[data-name="Buy_Orders"]').html()) - parseInt($(a).find('div[data-name="Buy_Orders"]').html());		
+	$('th.fraction_thead[data-name="Buy_Orders"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseInt($(b).find('td[data-name="Buy_Orders"]').html()) - parseInt($(a).find('td[data-name="Buy_Orders"]').html());		
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
 		} else {
-			$(divis).find('button').addClass('divead_button--active');
-			$('div.fraction_table__item').sort(function(a, b) {
-				return parseInt($(a).find('div[data-name="Buy_Orders"]').html()) - parseInt($(b).find('div[data-name="Buy_Orders"]').html());			
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseInt($(a).find('td[data-name="Buy_Orders"]').html()) - parseInt($(b).find('td[data-name="Buy_Orders"]').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
@@ -319,17 +319,17 @@ $(document).ready(function(){
 	$('ul.fraction_menu>a').on('click',function(){		
 		$('body').find('ul.pagin_ul>li').removeClass('active');
 		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
-		if($(divis).find('li.fraction_menu__button--vse').lengdiv>0){
+		if($(this).find('li.fraction_menu__button--vse').length>0){
 			$('ul.fraction_menu>a').removeClass('button_a--active');
 			$('ul.fraction_menu>a').find('li.fraction_menu__button--vse').parent().addClass('button_a--active');
 		} else {
-			if($(divis).hasClass('button_a--active')){
-				$(divis).removeClass('button_a--active');
-				if($('ul.fraction_menu>a.button_a--active').lengdiv==0){
+			if($(this).hasClass('button_a--active')){
+				$(this).removeClass('button_a--active');
+				if($('ul.fraction_menu>a.button_a--active').length==0){
 					$('ul.fraction_menu>a').find('li.fraction_menu__button--vse').parent().addClass('button_a--active');
 				}
 			} else {
-				$(divis).addClass('button_a--active');
+				$(this).addClass('button_a--active');
 				$('ul.fraction_menu>a').find('li.fraction_menu__button--vse').parent().removeClass('button_a--active');
 			}		
 		}			
@@ -338,17 +338,17 @@ $(document).ready(function(){
 	$('ul.menu_category>a').on('click',function(){		
 		$('body').find('ul.pagin_ul>li').removeClass('active');
 		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
-		if($(divis).find('input#charAll').lengdiv>0){
+		if($(this).find('input#charAll').length>0){
 			$('ul.menu_category>a>li').removeClass('active');
 			$('ul.menu_category>a>li').find('input#charAll').parent().addClass('active');
 		} else {
-			if($(divis).find('li').hasClass('active')){
-				$(divis).find('li').removeClass('active');
-				if($('ul.menu_category>a>li.active').lengdiv==0){
+			if($(this).find('li').hasClass('active')){
+				$(this).find('li').removeClass('active');
+				if($('ul.menu_category>a>li.active').length==0){
 					$('ul.menu_category>a>li').find('input#charAll').parent().addClass('active');
 				}
 			} else {
-				$(divis).find('li').addClass('active');
+				$(this).find('li').addClass('active');
 				$('ul.menu_category>a>li').find('input#charAll').parent().removeClass('active');
 			}		
 		}			
@@ -357,10 +357,10 @@ $(document).ready(function(){
 	$('ul.menu_rar>a').on('click',function(){		
 		$('body').find('ul.pagin_ul>li').removeClass('active');
 		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
-		if($(divis).find('li').hasClass('active')){
-			$(divis).find('li').removeClass('active');
+		if($(this).find('li').hasClass('active')){
+			$(this).find('li').removeClass('active');
 		} else {
-			$(divis).find('li').addClass('active')
+			$(this).find('li').addClass('active')
 		}		
 		sort();
 	});
@@ -373,7 +373,7 @@ $(document).ready(function(){
 		// $('ul.fraction_menu>a:first-child').addClass('button_a--active');
 		$('body').find('ul.pagin_ul>li').removeClass('active');
 		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
-		$('select[name=list1]>option:first-child').prop('selected','divue');
+		$('select[name=list1]>option:first-child').prop('selected','true');
 		sort();
 	});
 	$('.pagin_button_2_off').click(function(){
@@ -395,8 +395,8 @@ $(document).ready(function(){
 		sort();
 	});
 	$('.pagin_button_left').click(function(){
-		var count = $('body').find('ul.pagin_ul>li').lengdiv; 
-		var active = ($('body').find('ul.pagin_ul>li.active').lengdiv==0)?1:$('body').find('ul.pagin_ul>li.active').html(); 
+		var count = $('body').find('ul.pagin_ul>li').length; 
+		var active = ($('body').find('ul.pagin_ul>li.active').length==0)?1:$('body').find('ul.pagin_ul>li.active').html(); 
 		if(active>1){					
 			$('body').find('ul.pagin_ul>li').removeClass('active');
 			$('body').find('ul.pagin_ul>li:eq('+(active-2)+')').addClass('active');
@@ -416,8 +416,8 @@ $(document).ready(function(){
 		sort();
 	});
 	$('.pagin_button_ritch').click(function(){
-		var count = $('body').find('ul.pagin_ul>li').lengdiv;
-		var active = ($('body').find('ul.pagin_ul>li.active').lengdiv==0)?1:$('body').find('ul.pagin_ul>li.active').html(); 
+		var count = $('body').find('ul.pagin_ul>li').length;
+		var active = ($('body').find('ul.pagin_ul>li.active').length==0)?1:$('body').find('ul.pagin_ul>li.active').html(); 
 		if(count>active){
 			$('body').find('ul.pagin_ul>li').removeClass('active');
 			$('body').find('ul.pagin_ul>li:eq('+active+')').addClass('active');
