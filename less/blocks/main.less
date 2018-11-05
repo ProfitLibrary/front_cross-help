@@ -1,6 +1,4 @@
-﻿//test n 
-// tests
-*{
+﻿*{
     border: none;
     box-shadow: none;
     text-decoration: none;
@@ -287,7 +285,7 @@ box-sizing: border-box;
 	justify-content: flex-end;
 	width: 23.54vw;
 	height: 10.2vw;
-	margin-right: 1.5vw;
+	margin-right: -1vw;
 	&--mini{
 		margin-right: -3.2vw;
     width: 16.54vw;
@@ -370,7 +368,7 @@ font-size: 1.25vw;
 		background-image: url(../image/Buttom_Main_menu/bm_0000s_0004_Buttom-2-click.png);	
 	}
 }
-.main_menu__a .active{
+.main_menu__a.active{
 		background-image: url(../image/Buttom_Main_menu/bm_0000s_0004_Buttom-2-click.png);	
 }
 
@@ -411,6 +409,9 @@ font-size: 1.25vw;
 		color: #fff;
 	} 
 	&:active{
+		color: #fff; 
+	}
+	.active{
 		color: #fff; 
 	}
 	&--active{
@@ -948,11 +949,16 @@ background-image: url(../image/Content/Table_ico/Ico-arrow-grey-clik.png);
 border:none;
 }
 .thead_button{
-	width: 0.782vw;
-	height: 0.782vw;
+	// width: 0.782vw;
+	// height: 0.782vw;
+	width: 0.982vw;
+	height: 0.982vw;
+	
 	color: #d0cfcf;
 	background-image: url(../image/Content/Table_ico/Ico-arrow-grey-off.png);
-background-size: 100% 100%;
+// background-size: 100% 100%;
+background-size: contain;
+background-repeat: no-repeat;
 // margin-left: 4%;
 &--active {
 	background-image: url(../image/Content/Table_ico/Ico-arrow-grey-off.png);
@@ -968,9 +974,9 @@ tr{
 	// margin-bottom: 1.041vw;
 	margin-bottom: 0.5vw;
 	
-padding: 5px 5px;
+// padding: 5px 5px;
 padding-left: 0;
-box-sizing: border-box;
+// box-sizing: border-box;
 }
 tr:hover{
 	border: 1px solid #ffffff;
@@ -994,7 +1000,7 @@ display: flex;
 // width: 9vw;
 // width: 12vw;
 width: 16vw;
-// width: 18vw;
+// width: 18vw; 
 padding: 0px;
 text-align: left;
 }
@@ -1010,7 +1016,7 @@ text-align: left;
 	// margin-left: 10%;
 	margin-left: 5%;
 	font-family:'Exo 2', sans-serif;
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 1.05vw;
 	// font-size: 1.093vw;
 width: 100%;
@@ -1032,8 +1038,8 @@ width: 100%;
 
 	.fraction_table__item{
 	width: 64.06vw;
-	height: 3.75vw;	
-	padding: 5px 4px;
+	// height: 3.75vw;	
+	// padding: 5px 4px;
 	padding-left: 0px;
 	}
 /*Class Color*/ 

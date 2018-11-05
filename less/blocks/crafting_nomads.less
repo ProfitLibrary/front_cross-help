@@ -4,6 +4,7 @@
 .crafting_definition{
 	width: 100%;
 	padding-top: 0.781vw;
+	padding-bottom: 0.781vw;
 	padding-left: 0.833vw;
 	font-family: 'Exo 2', sans-serif;
 	&__title{
@@ -78,6 +79,7 @@
 		color: #d8c78a;
 		font-size: 0.833vw;
 		font-weight: 400;
+		line-height: 1.771vw;
 	}
 }
 .fraction--crafting{
@@ -85,55 +87,68 @@
 }
 .fraction_table__thead--crafting{
 	tr{
-		justify-content: flex-start;
+		display: block;
+		width: 64.063vw;
+		th{
+			padding-top: 0.521vw;
+			float: left;
+		}
 	}
 	.fraction_thead{
 		width: auto;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.fraction_table__a{
-		button{
-			padding: 0;
-		}
 		p{
 			padding: 0;
 		}
-		&--name p{
-			width: 6.51vw;
-			margin-left: 0.781vw;
-			margin-right: 4.271vw;
+		button{
+			width: 1.2vw;
+    	height: 0.8vw;
+    	margin-left: 0.417vw;
+			padding: 0;
 		}
-		&--buy p{
-			width: 3.542vw;
-			margin-left: 6.615vw;
-			margin-right: 0.469vw;
+		&--name{
+			width: 13vw;
+			margin-right: 6.667vw; 
+			button{
+				margin-left: 4.271vw;
+			}
 		}
-		&--sale1 p{
-			width: 3.802vw;
-			margin-left: 3.438vw;
-			margin-right: 0.365vw;
+		&--buy{
+			margin-right: 1.042vw;
+			width: 5.104vw;
+			padding-left: 1.563vw;
+			p{
+				width:  3.7vw;
+			}
+			button{
+				margin: 0;
+			}
 		}
-		&--price1 p{
-			width: 6.615vw;
-			margin-left: 1.51vw;
-			margin-right: 0.625vw;
+		&--sale1{
+			margin-right: 0.99vw;
+			p{
+				width:  3.7vw;
+			}
+		}
+		&--price1{
+			width:  8.2vw;
+			margin-right: 0.4vw;
 			color: #c3cdfb;
 		}
-		&--sale2 p{
-			width: 3.854vw;
-			margin-left: 0.677vw;
-			margin-right: 0.365vw;
+		&--sale2{
+			width:  6vw;
+			margin-right: 0.521vw;
 			color: #c3cdfb;
 		}
-		&--price2 p{
-			width: 6.615vw;
-			margin-left: 1.146vw;
-			margin-right: 0.625vw;
+		&--price2{
+			width:  8.2vw;
+			margin-right: 0.521vw;
 			color: #fbc498;
 		}
-		&--sale3 p{
-			width: 3.854vw;
-			margin-left: 0.625vw;
-			margin-right: 0.417vw;
+		&--sale3{
 			color: #fbc498;
 		}
 	}
@@ -141,60 +156,94 @@
 .fraction_table--crafting {
 	position: relative;
   width: 100%;
-  margin-top: 0.27vw;
-	// padding-bottom: 11.615vw;
   border-spacing: 0 0.521vw;
   .bg_table{
   	position: absolute;
   	bottom: 0;
   }
 }
+.fraction_content--crafting{
+	width: 64.063vw;
+}
 .fraction_content--crafting .fraction_table__item{
+	position: relative;
+	width: 64.063vw;
+	height: 3.60vw;
 	td{
 		justify-content: flex-end;
-		font-size: 0.833vw;
+		box-sizing: border-box;
+		font-size: 1.041vw;
+		.icon{
+			width: 1.1vw;
+			height: 1.15vw;
+			margin-left: 0.3vw;
+		}
+	}
+	.buy{
+		width: 8vw;
 	}
 	.name{
 		width: 7vw;
+	}
+	.sale1{
+		box-sizing: border-box;
+		padding-right: 1vw;
+		width: 9vw;
 	}
 	.price1{
 		width: 11vw;
 	}
 	.price2{
+		box-sizing: border-box;
+		padding-right: 1.667vw;
 		width: 8.698vw;
 		text-align: center;
 	}
 	.sale3{
-		margin-right: 2.5vw;
+		margin-right: 2vw;
 	}
 	.td_name{
-		width: 22vw;
+		width: 25vw;
 	}
 	.td_name .foto_tovara{
-		width: 3.75vw;
-		height: 3.75vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+		top: 0;
+		width: 3.60vw;
+		height: 3.60vw;
 		max-width: none;
 		max-height: none;
 	}
 	.td_name_text__wrap{
 		display: flex;
-		line-height: 1.667vw;
+		align-items: center;
+		width: 98%;
+		font-weight: 300;
+		line-height: 0.8vw;
 		.descripton_color{
-			padding-right: 0.208vw;
-			font-size: 0.938vw;
+			font-size: 0.9vw;
 		}
 		.td_name_text__popularity{
 			color: #d8c78a;
-			font-size: 0.833vw;
+			font-size: 0.7vw;
 		}
 	}
 	.td_name_text{
-		font-size: 0.938vw;
-	}
-	.td_name_text img{
-			width: 1.823vw;
-			height: 1.823vw;
+		margin-left: 4.792vw;
+		font-size: 1.094vw;
+		font-weight: 500;
+		line-height: 1vw;
+		img{
+			width: 1.3vw;
+			height: 1.3vw;
 			margin-right: 0.208vw;
+		}
+		.td_name_text__icon_money{
+			margin-top: 0.2vw;
+			width: 1.2vw;
+			height: 1.2vw;
+		}
 	}
 	.sale1__text{
 		color: #c3cdfb;
