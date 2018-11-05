@@ -1,0 +1,305 @@
+.main_header--advantageous_crafting{
+	padding-top: 0.7vw;
+}
+
+.fraction--advantageous_crafting .crafting_definition{
+	width: 100%;
+	padding-top: 0.781vw;
+	padding-bottom: 0.781vw;
+	padding-left: 0.833vw;
+	font-family: 'Exo 2', sans-serif;
+	&__title{
+		margin-bottom: 1.042vw;
+		color: #f0972c; 
+		font-size: 1.25vw; 
+		font-weight: 300; 
+		font-family: 'Exo 2', sans-serif;
+	}
+	&__text{
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.042vw;
+		color: #bebdbd; 
+		font-size: 1.25vw; 
+		font-weight: 300; 
+		font-family: 'Exo 2', sans-serif;
+		&--buy{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		&--sale{
+			margin-top: 0;
+		}
+		&--align_items{
+			align-items: flex-start;
+			line-height: 1.2vw;
+			.crafting_definition__profit_span{
+				margin: 0;
+			}
+		}
+		span{
+			margin: 0 0.5vw;
+		}
+	}
+	&__text_icon{
+		position: relative;
+		margin-bottom: 1.042vw;
+		padding-left: 2vw;
+		color: #bebdbd; 
+		font-size: 1.25vw; 
+		font-weight: 300; 
+		font-family: 'Exo 2', sans-serif;
+		line-height: 0.833vw;
+	}
+	&__text--last{
+		margin-bottom: 0;
+	}
+	&__icn--money_mini_gold{
+		position: absolute;
+		left: 0.1vw;
+    top: -0.1vw;
+		width: 1.667vw;
+		height: 1.667vw;
+		background: url(../image/advantageous_crafting/money-mini-gold.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	&__icn--money_mini_green{
+		position: absolute;
+    left: 0.1vw;
+    top: -0.1vw;
+		width: 1.406vw;
+		height: 1.302vw;
+		background: url(../image/advantageous_crafting/money-mini-green.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	&__buy{
+		color: #c3cdfb;
+		font-size: 0.938vw;
+		font-weight: 300;
+	}
+	&__sale{
+		color: #fbc498;
+		font-size: 0.938vw;
+		font-weight: 300;
+	}
+	&__profit{
+		color: #fbc498;
+		font-size: 0.938vw;
+		font-weight: 300;
+		line-height: 1.2vw;
+	}
+	&__popularity{
+		margin-bottom: 0;
+		padding: 0;
+		color: #d8c78a;
+		font-size: 0.938vw;
+		font-weight: 300;
+	}
+}
+
+.fraction_panel--advantageous_crafting{
+	margin-top: 0;
+	padding: 0 0.5vw;
+	justify-content: flex-start;
+	.fraction_panel__search{
+		display: block;
+		width: 14.5vw;
+		transform: translateY(0.3vw);
+		label{
+			margin-bottom: 0;
+		}
+		input{
+			width: 11.458vw;
+		}
+		.form_button{
+			width: auto;
+			height: auto;
+			img{
+				width: 1.406vw;
+				height: 1.198vw;
+				transform: translateY(0.3vw);
+			}
+		}
+	}
+	.fraction_panel__rarity{
+
+	}
+}
+
+
+.fraction--advantageous_crafting{
+	background-color: rgba(22, 22, 22, .5)
+}
+.fraction_table__thead--advantageous_crafting{
+	tr{
+		display: block;
+		width: 64.063vw;
+		th{
+			float: left;
+			padding-top: 0.521vw;
+		}
+	}
+	.fraction_thead{
+		width: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.fraction_table__a{
+		font-size: 0.938vw;
+		p{
+			padding: 0;
+		}
+		button{
+			width: 1.2vw;
+    	height: 0.8vw;
+    	margin-left: 0.417vw;
+			padding: 0;
+		}
+		&--name{
+			width: 14.5vw;
+			margin-right: 6.667vw; 
+			button{
+				margin-left: 4.271vw;
+			}
+		}
+		&--popularity{
+			text-align: center;
+			color: #d8c78a;
+		}
+		&--buy{
+			width: 5.5vw;
+			text-align: center;
+		}
+		&--buy_price{
+			width:  9.5vw;
+			color: #c3cdfb;
+		}
+		&--sell{
+			width:  6vw;
+			text-align: center;
+		}
+		&--sell_price{
+			width:  9.5vw;
+			color: #fbc498;
+		}
+		&--price2{
+			width:  8.2vw;
+			color: #fbc498;
+		}
+		&--profit{
+			color: #fbc498;
+		}
+	}
+}
+.fraction_table--advantageous_crafting {
+	position: relative;
+  width: 100%;
+  border-spacing: 0 0.521vw;
+  .bg_table{
+  	position: absolute;
+  	bottom: 0;
+  }
+}
+.fraction_content--advantageous_crafting{
+	width: 64.063vw;
+}
+.fraction_content--advantageous_crafting 
+.fraction_table__item{
+	position: relative;
+	width: 64.063vw;
+	height: 3.60vw;
+	td{
+		justify-content: flex-end;
+		box-sizing: border-box;
+		font-size: 0.938vw;
+		.icon{
+			width: 1.1vw;
+			height: 1.15vw;
+			margin-left: 0.3vw;
+		}
+	}
+	.buy{
+		width: 8vw;
+		padding-right: 0.8vw;
+	}
+	.popularity{
+		width: 8vw;
+		color: #d8c78a;
+	}
+	.sale1{
+		box-sizing: border-box;
+		padding-right: 1.5vw;
+		width: 9vw;
+	}
+	.price1{
+		width: 11vw;
+		padding-right: 2.3vw;
+	}
+	.price2{
+		box-sizing: border-box;
+		padding-right: 2.2vw;
+		width: 8.698vw;
+		text-align: center;
+	}
+	.sale3{
+		margin-right: 2vw;
+		padding-right: 0.5vw;
+	}
+	.td_name{
+		width: 23vw;
+	}
+	.td_name .foto_tovara{
+		position: absolute;
+		top: 0;
+		left: 0;
+		top: 0;
+		width: 3.60vw;
+		height: 3.60vw;
+		max-width: none;
+		max-height: none;
+	}
+	.td_name_text__wrap{
+		display: flex;
+		align-items: center;
+		width: 98%;
+		font-weight: 300;
+		line-height: 0.8vw;
+		.descripton_color{
+			font-size: 0.9vw;
+		}
+	}
+	.td_name_text{
+		margin-left: 4.792vw;
+		font-size: 1.094vw;
+		font-weight: 500;
+		line-height: 1vw;
+		img{
+			width: 1.3vw;
+			height: 1.3vw;
+			margin-right: 0.208vw;
+		}
+		.td_name_text__icon_money{
+			margin-top: 0.2vw;
+			margin-left: 0.2vw;
+			width: 1.2vw;
+			height: 1.2vw;
+		}
+	}
+	.sale1__text{
+		color: #c3cdfb;
+	}
+	.price1__text{
+		
+	}
+	.price2__text{
+		color: #fbc498;
+	}
+	.sale3__text{
+		color: #fbc498;
+	}
+}
+
+.fraction_footer--advantageous_crafting{
+	padding-bottom: 4vw;
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>  
+	<meta charset="UTF-8">
+	<title>Главная</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css"> 
+</head>
+<body class="main">
+<header class="main_header main_header--advantageous_crafting header_background__expedient-craft--ru" name="top">
+<a class="header_logo_a header_logo_a--mini" href="index.html"><div class="main_header__logo--mini"></div></a>
+ </header>
+<main class="content"> 
+	<nav class="main_menu">
+		<ul class="main_menu__ul">
+			<a class="main_menu__a" href=""> <li class="menu_button">Фарм монет</li></a>
+			<a class="main_menu__a" href="market.html"><li class="menu_button">Цены товаров</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Обмен значков</li></a>
+			<a class="main_menu__a" href="crafting.html"><li class="menu_button"> Крафт деталей</li></a>
+			<a class="main_menu__a main_menu__a--active" href=""><li class="menu_button menu_button--active"> Выгодный крафт</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Доп. материалы</li></a>
+			<a class="main_menu__a" href=""><li class="menu_button"> Турниры</li></a>
+			<!-- <a class="main_menu__a" href=""><li class="menu_button"> Выгодный набор</li></a>
+			<a class="main_menu__a tourney" href=""><li class="menu_button "> Турнир</li></a>
+			<a class="main_menu__a top" href=""><li class="menu_button "> Топ кланов</li></a> -->
+		</ul> 
+	</nav>    
+
+	<div class="main_fraction"> 
+
+	<div class="fraction fraction--advantageous_crafting"> 
+		<div class="crafting_definition">
+			<h2 class="crafting_definition__title">Себестоимость крафта  расчитана с учетом затрат на станки фракции по стандатной стоимости.</h2>
+			<p class="crafting_definition__text_icon">
+				<span class="crafting_definition__icn--money_mini_gold"></span> - деталь выгодно крафтить на продажу.
+			</p>
+			<p class="crafting_definition__text_icon">
+				<span class="crafting_definition__icn--money_mini_green"></span> - деталь не выгодно крафтить для продажи.
+			</p>
+			<p class="crafting_definition__text">
+				<span class="crafting_definition__popularity">Популярность</span> - это отношение предложения/ спросу на рынке на данный товар
+			</p>
+			<p class="crafting_definition__text">
+				<span class="crafting_definition__buy">Себестоимость<br>по цене покупки</span> - себестоимость и выгода с учетом крафта всех предметов для рецепта.
+			</p>
+			<p class="crafting_definition__text">
+				<span class="crafting_definition__sale">Себестоимост<br>по цене продажи</span> - себестоимость и выгода с учетом покупки всех предметов для рецепта.
+			</p>
+			<p class="crafting_definition__text crafting_definition__text--align_items">
+				<span class="crafting_definition__profit">Прибыль</span><span class="crafting_definition__profit_span">-</span><span>прибыль от продажи предмета  с учетом крафта предмета при условии покупки всех деталей для него по цене продажи</span>
+			</p>
+		</div>
+
+
+		<div class="fraction_panel fraction_panel--advantageous_crafting">
+			<div class="fraction_panel__search fraction_form">
+				<label>Поиск</label>
+				<input class="form_input input_border" id="regexp" name="s" placeholder="" type="search" value=''>
+				<button class="form_button" width="27" height="23" onclick=""><img src="image/Content/Element_Search/Icon_search.png"></button>
+				</div>
+		
+			<div class="fraction_panel__rarity"> 
+				<label>Редкость</label>
+				<ul class="menu_rar">
+					<a><li class="fraction_rarity fraction_rarity__Common"><input type="checkbox" class="filters_items" id="charCommon" value="Common"/></li></a>
+					<a><li class="fraction_rarity fraction_rarity__rare"><input type="checkbox" class="filters_items" id="charRare" value="Rare"/></li></a>
+					<a><li class="fraction_rarity fraction_rarity__epic"><input type="checkbox" class="filters_items" id="charEpic" value="Epic"/></li></a>
+					<a><li class="fraction_rarity fraction_rarity__legendary"><input type="checkbox" class="filters_items" id="charLegendary" value="Legendary"/></li></a>
+					<a><li class="fraction_rarity fraction_rarity__relic"><input type="checkbox" class="filters_items" id="charRelic" value="Relic"/></li></a>
+				</ul>
+			</div>
+		</div>
+
+
+
+	<div class="fraction_content fraction_content--advantageous_crafting">
+		<table class="fraction_table fraction_table--advantageous_crafting" id="fraction_table_sorter"> 
+			<thead class="fraction_table__thead fraction_table__thead--advantageous_crafting">
+				<th data-name="name" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--name "><p>Наименование</p><button class="thead_button thead_button--active"></button></a>
+				</th>
+				<th data-name="" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--popularity"><p>Популяр-<br>ность</p><button class="thead_button"></button></a>
+				</th>
+				<th data-name="Buy" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--buy"><p>Цена<br>покупки</p><button class="thead_button"></button></a>
+				</th>
+				<th data-name="Buy_Price" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--buy_price"><p>Себестоимость<br>по цене покупки</p><button class="thead_button"></button></a>
+				</th>
+				<th data-name="Sell"  class="fraction_thead">
+					<a  class="fraction_table__a fraction_table__a--sell"><p>Цена<br>продажи</p><button class="thead_button"></button></a>
+				</th>
+				<th data-name="Sell_Price"  class="fraction_thead">
+					<a  class="fraction_table__a fraction_table__a--sell_price"><p> Себестоимость<br>по цене продажи</p><button class="thead_button"></button></a>
+				</th>
+				<th data-name="Profit"  class="fraction_thead">
+					<a  class="fraction_table__a fraction_table__a--profit"><p>Прибыль</p><button class="thead_button"></button></a>
+				</th>
+			</thead>
+
+			<tbody id="target">
+
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
+						<div class="td_name_text">
+							<div class="name_color_rare">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/10</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_epic">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">авто пушка</div>
+								<img src="image/advantageous_crafting/money-mini-green.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/89</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_legendary">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/90</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
+						<div class="td_name_text">
+							<div class="name_color_rare">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/10</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_epic">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">авто пушка</div>
+								<img src="image/advantageous_crafting/money-mini-green.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/89</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_legendary">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/90</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
+						<div class="td_name_text">
+							<div class="name_color_rare">6П5-4 Вектор</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/10</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+					<td class="td_name">
+						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
+						<div class="td_name_text">
+							<div class="name_color_epic">Радар-детектор мощный</div><!-- АП72 Вихрь -->
+							<div class="td_name_text__wrap">
+								<div class="descripton_color">авто пушка</div>
+								<img src="image/advantageous_crafting/money-mini-green.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/89</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
+						<div class="td_name_text">
+							<div class="name_color_legendary">Аспект</div>
+							<div class="td_name_text__wrap">
+							<div class="descripton_color">Пулемет</div>
+								<img src="image/advantageous_crafting/money-mini-gold.png" alt="" class="td_name_text__icon_money">
+							</div>
+						</div>
+					</td>  
+					<td class="popularity" data-name="popularity"><span>32/90</span></td>
+					<td class="buy" data-name="buy"><span>45.95</span></td>
+					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span></td>
+					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+				</tr>
+
+			</tbody>
+		</table>
+		
+				<div class="fraction_footer fraction_footer--advantageous_crafting">
+				<div class="fraction_footer_pagin">
+					<button class=" pagin_button pagin_button_1_off"></button>
+					<button class="pagin_button pagin_button_left"></button>
+					<ul class="pagin_ul">
+						<li class="pagin_li">1</li>
+						<li class="pagin_li">2</li>
+						<li class="pagin_li">3</li>
+						<li class="pagin_li">4</li>
+						<li class="pagin_li">5</li>
+					</ul>
+					<button class="pagin_button  pagin_button_ritch"></button>
+					<button class="pagin_button  pagin_button_2_off"></button>
+				</div>
+				<div class="fraction_footer_clear">
+					
+				</div>
+				<div class="text_select">Позиций</div>
+				<div class="main_select"><form class="form_select" action="formdata" method="POST" name="form1">
+			<p><select class="select"  name="list1">
+			<option value="7" selected>7</option>
+			<option value="10">10</option>
+			<option value="25" >25</option>
+			<option value="50">50</option>
+			<option value="1000">Все</option>
+			</select></p>
+			</form></div>
+			
+		</div></div><div class="line_gorizontal"></div></div></div>
+
+
+
+</main>
+<footer class="footer">
+	<div class="footer_last__content">
+	<div class="footer_top">
+		<div class="footer_top__news"><a class="footer_top__news_a name_color_browen" href="">Новости</a>
+		<a class="footer_top__news_a" href="">Информация по обновлению<br>Crossout 0.9.130</a><a class="footer_top__news_a " href="">Вопросы и ответы</a></div>
+		<div class="footer_top__help"><a class="footer_top__help_a name_color_browen" href="">Поддержка</a>
+		<a class="footer_top__help_a" href="">Поддержать проект</a>
+		<a class="footer_top__help_a" href="">Сотрудничество</a>
+		<a class="footer_top__help_a" href="">О нас</a>
+	</div>
+		<div class="footer_top__soc_icon">
+		<a href=""><div class="soc_icon_U"></div></a>	
+			<a href=""><div class="soc_icon_U1"></div></a>	
+			<a href=""><div class="soc_icon_U2"></div></a>	
+		</div>
+	</div>	
+	<div class="footer_main_bottom"><div class="footer_bootom">
+		<div class="footer_text"> Last update</div>
+		<div class="footer_bootom_vijet">
+			
+			<div class="vijet_data"> 
+			<div class="data">05.10.2018</div>
+			<div class="time">22:32:41</div>
+		</div>
+		</div>
+		<div class="footer_pravo">© 2018  Все содержание, включая идеи оформления и стиль, являются объектом авторского права.<br> 
+Права на изображения пренадлежат Gaijin Entertaiment. Создано при поддержке игрового сообщества Uran Expres</div>
+	</div>	
+	<div class="footer_foto">
+		<div class="foto1"></div>
+		<div class="foto2"></div>
+		<div class="foto3"></div>
+	</div>
+
+		<div>
+<a href="#top"><button class="button_top"></button></a>
+</footer>
+<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">  -->
+<!-- <script src="js/filterTable.v1.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/sort.js"></script>
+<script src="js/script.js"></script> -->
+
+
+<!--<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+ 
+ <!-- <script>
+ $(document).ready(function() {
+    $('#fraction_table_sorter').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+ </script> -->
+</body>
+</html>
