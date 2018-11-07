@@ -73,7 +73,7 @@
 								<th data-name="name" class="fraction_thead">
 									<a class="fraction_table__a fraction_table__a--name "><p>Наименование</p><button class="thead_button thead_button--active"></button></a>
 								</th>
-								<th data-name="Popularity" class="fraction_thead">
+								<th  data-orderable="false" class="fraction_thead">
 									<a class="fraction_table__a fraction_table__a--popularity"><p>Популяр-<br>ность</p><button class="thead_button"></button></a>
 								</th>
 								<th data-name="Buy" class="fraction_thead">
@@ -106,7 +106,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>18/7</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>18/7</td>
 									<td class="buy" data-name="buy"><span>195</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">1</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+2</span></td>
@@ -124,7 +124,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>1/82</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>1/82</td>
 									<td class="buy" data-name="buy"><span>1</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">4</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+66</span></td>
@@ -141,7 +141,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>3/5</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>3/5</td>
 									<td class="buy" data-name="buy"><span>25</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">23</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+23</span></td>
@@ -158,7 +158,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>3/8</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>3/8</td>
 									<td class="buy" data-name="buy"><span>35</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">4</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+17</span></td>
@@ -176,7 +176,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>12/7</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>12/7</td>
 									<td class="buy" data-name="buy"><span>454</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">5273</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+170</span></td>
@@ -193,7 +193,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>331/90</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>331/90</td>
 									<td class="buy" data-name="buy"><span>425</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">521</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+10</span></td>
@@ -210,7 +210,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>4/30</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>4/30</td>
 									<td class="buy" data-name="buy"><span>5</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">583</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+180</span></td>
@@ -228,7 +228,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>87/39</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>87/39</td>
 									<td class="buy" data-name="buy"><span>7</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">583</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+180</span></td>
@@ -245,7 +245,7 @@
 											</div>
 										</div>
 									</td>
-									<td class="popularity" data-name="Popularity"><span>3/3</span></td>
+									<td class="popularity" data-name="Popularity"><span></span>3/3</td>
 									<td class="buy" data-name="buy"><span>8</span></td>
 									<td class="sale1" data-name="sale1"><span class="sale1__text">9</span></td>
 									<td class="price1" data-name="price1"><span class="price1__text">+9</span></td>
@@ -331,7 +331,7 @@
 							<script>
 								$(document).ready(function() {
 									$('#fraction_table_sorter').DataTable( {
-									"pagingType": "full_numbers"
+										"pagingType": "full_numbers",
 									} );
 								} );
 							</script>

@@ -3,7 +3,8 @@ $(document).ready(function(){
 		return function( elem ) {
 			return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
 		};
-	});
+	});	
+
 	function sort(first){
 		var pagin_count = $('select[name="list1"]').val(); 
 		var pagin_pos = ($('ul.pagin_ul>li.active').length==0)?1:$('ul.pagin_ul>li.active').html(); 
@@ -190,6 +191,25 @@ $(document).ready(function(){
 			sort();
 		}
 	});
+	$('th.fraction_thead[data-name="Popularity"]').click(function(){
+		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
+		$(this).find('a').addClass('fraction_table__a--active');
+		if($(this).find('button').hasClass('thead_button--active')){
+			$(this).find('button').removeClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(b).find('td[data-name="Popularity"]>span').html()) - parseFloat($(a).find('td[data-name="Popularity"]>span').html());		
+			})
+			.detach().appendTo('table.fraction_table>tbody');
+			sort();
+		} else {
+			$(this).find('button').addClass('thead_button--active');
+			$('tr.fraction_table__item').sort(function(a, b) {
+				return parseFloat($(a).find('td[data-name="Popularity"]>span').html()) - parseFloat($(b).find('td[data-name="Popularity"]>span').html());			
+			})
+			.detach().appendTo('table.fraction_table>tbody');
+			sort();
+		}
+	});
 	$('th.fraction_thead[data-name="Sell_Price"]').click(function(){
 		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
 		$(this).find('a').addClass('fraction_table__a--active');
@@ -261,25 +281,6 @@ $(document).ready(function(){
 			$(this).find('button').addClass('thead_button--active');
 			$('tr.fraction_table__item').sort(function(a, b) {
 				return parseInt($(a).find('td[data-name="Sell"]').html()) - parseInt($(b).find('td[data-name="Sell"]').html());			
-			})
-			.detach().appendTo('table.fraction_table>tbody');
-			sort();
-		}
-	});
-	$('th.fraction_thead[data-name="Popularity"]').click(function(){
-		$('th.fraction_thead>a').removeClass('fraction_table__a--active');
-		$(this).find('a').addClass('fraction_table__a--active');
-		if($(this).find('button').hasClass('thead_button--active')){
-			$(this).find('button').removeClass('thead_button--active');
-			$('tr.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(b).find('td[data-name="Popularity"]>span').html()) - parseFloat($(a).find('td[data-name="Popularity"]>span').html());		
-			})
-			.detach().appendTo('table.fraction_table>tbody');
-			sort();
-		} else {
-			$(this).find('button').addClass('thead_button--active');
-			$('tr.fraction_table__item').sort(function(a, b) {
-				return parseFloat($(a).find('td[data-name="Popularity"]>span').html()) - parseFloat($(b).find('td[data-name="Popularity"]>span').html());			
 			})
 			.detach().appendTo('table.fraction_table>tbody');
 			sort();
