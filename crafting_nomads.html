@@ -30,13 +30,13 @@
 	<div class="main_fraction"> 
 		<ul class="fraction_menu"> 
 			<a class="button_a"><li class="fraction_menu__button fraction_menu__button--ivet">Ивент</li></a>
-			<a class="button_a"><li data='Engineers' class="fraction_menu__button">Механики</li></a>
-			<a class="button_a"><li data='Lunatics' class="fraction_menu__button">Бешеные</li></a>
-			<a class="button_a button_a--active"><li data='Nomads' class="fraction_menu__button active">Скитальцы</li></a>
-			<a class="button_a"><li data='Scavanger' class="fraction_menu__button">Мусорщики</li></a>
-			<a class="button_a"><li data='Steppenwolfs' class="fraction_menu__button fraction_menu__button--two">Степные волки</li></a>
-			<a class="button_a"><li data="DawnsChildren" class="fraction_menu__button fraction_menu__button--two">Дети рассвета</li></a>
-			<a class="button_a"><li data='Firestarters' class="fraction_menu__button fraction_menu__button--last">Огнепоклонники</li></a> 
+			<a class="button_a"><li class="fraction_menu__button">Механики</li></a>
+			<a class="button_a"><li class="fraction_menu__button">Бешеные</li></a>
+			<a class="button_a"><li class="fraction_menu__button">Скитальцы</li></a>
+			<a class="button_a"><li class="fraction_menu__button">Мусорщики</li></a>
+			<a class="button_a"><li class="fraction_menu__button fraction_menu__button--two">Степные волки</li></a>
+			<a class="button_a"><li class="fraction_menu__button fraction_menu__button--two">Дети рассвета</li></a>
+			<a class="button_a"><li class="fraction_menu__button fraction_menu__button--last">Огнепоклонники</li></a> 
 		</ul> 
 
 	<div class="fraction fraction--crafting"> 
@@ -65,17 +65,53 @@
 	<div class="fraction_content fraction_content--crafting">
 		<table class="fraction_table fraction_table--crafting" id="fraction_table_sorter"> 
 			<thead class="fraction_table__thead fraction_table__thead--crafting">
-				<th data-name="name" class="fraction_thead"><a class="fraction_table__a fraction_table__a--name "><p>Наименование</p><button class="thead_button thead_button--active"></button></a></th>
-				<th data-name="Sell" class="fraction_thead"><a class="fraction_table__a fraction_table__a--buy"><p>Цена покупки</p><button class="thead_button"></button></a></th>
-				<th data-name="Buy" class="fraction_thead"><a class="fraction_table__a fraction_table__a--sale1"><p>Цена продажи</p><button class="thead_button"></button></a></th>
-				<th data-name="Sell_Price" class="fraction_thead"><a class="fraction_table__a fraction_table__a--price1"><p>Себе-<br>стоимость</p><button class="thead_button"></button></a></th><th data-name="Margin"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--sale2"><p>Прибыль</p><button class="thead_button"></button></a></th>
-				<th data-name="Buy_Price"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--price2"><p>Себе-<br>стоимость</p><button class="thead_button"></button></a></th>
-				<th data-name="Buy"  class="fraction_thead"><a  class="fraction_table__a fraction_table__a--sale3"><p>Прибыль</p><button class="thead_button"></button></a></th>
+				<th data-name="name" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--name ">
+						<p>Наименование</p>
+						<button class="thead_button thead_button--active"></button>
+					</a>
+				</th>
+				<th data-name="Sell" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--buy">
+						<p>Цена покупки</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
+				<th data-name="Buy" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--sale1">
+						<p>Цена продажи</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
+				<th data-name="Sell_Price" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--price1">
+						<p>Себе-<br>стоимость</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
+				<th data-name="Profit_buy" class="fraction_thead">
+					<a class="fraction_table__a fraction_table__a--sale2">
+						<p>Прибыль</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
+				<th data-name="Buy_Price"  class="fraction_thead">
+					<a  class="fraction_table__a fraction_table__a--price2">
+						<p>Себе-<br>стоимость</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
+				<th data-name="Profit_sell"  class="fraction_thead">
+					<a  class="fraction_table__a fraction_table__a--sale3">
+						<p>Прибыль</p>
+						<button class="thead_button"></button>
+					</a>
+				</th>
 			</thead>
 
 			<tbody id="target">
 
-				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+				<tr class="fraction_table__item items_color__rare">
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
 							<div class="name_color_rare">6П5-4 Вектор</div>
@@ -86,15 +122,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+				<tr class="fraction_table__item items_color__rare">
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
 							<div class="name_color_rare">6П5-4 Вектор</div>
@@ -105,15 +141,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>322.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>452.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">522.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+122.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">272.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+232</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>322.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>452.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">522.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+122.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">272.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+232</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__rare" data-cat="Cabins" data-color="Rare" data-fraction="">
+				<tr class="fraction_table__item items_color__rare">
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_1.png">
 						<div class="td_name_text">
 							<div class="name_color_rare">6П5-4 Вектор</div>
@@ -124,15 +160,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>3.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>4.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">5.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+2.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">7.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+3</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>3.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>4.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">5.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+2.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">7.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+3</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+				<tr class="fraction_table__item items_color__epic" >
 					<td class="td_name">
 						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
 						<div class="td_name_text">
@@ -145,15 +181,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32889</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32889</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+				<tr class="fraction_table__item items_color__epic" >
 					<td class="td_name">
 						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
 						<div class="td_name_text">
@@ -166,15 +202,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__epic"  data-cat="Movement" data-color="Epic"  data-fraction="Firestarters">
+				<tr class="fraction_table__item items_color__epic" >
 					<td class="td_name">
 						<img class="foto_tovara" src="image/crafting/object/tovar_10.png">
 						<div class="td_name_text">
@@ -187,15 +223,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+				<tr class="fraction_table__item items_color__legendary" >
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
 						<div class="td_name_text">
 							<div class="name_color_legendary">Аспект</div>
@@ -207,15 +243,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+				<tr class="fraction_table__item items_color__legendary" >
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
 						<div class="td_name_text">
 							<div class="name_color_legendary">Аспект</div>
@@ -227,15 +263,15 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 
-				<tr class="fraction_table__item items_color__legendary"  data-cat="Weapons" data-color="Legendary"  data-fraction="">
+				<tr class="fraction_table__item items_color__legendary" >
 					<td class="td_name"><img class="foto_tovara" src="image/crafting/object/tovar_19.png">
 						<div class="td_name_text">
 							<div class="name_color_legendary">Аспект</div>
@@ -247,12 +283,12 @@
 							</div>
 						</div>
 					</td>  
-					<td class="name" data-name="name"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="buy" data-name="buy"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="sale1" data-name="sale1"><span class="sale1__text">52.3</span></td>
-					<td class="price1" data-name="price1"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
-					<td class="price2" data-name="price2"><span class="price2__text">27.9</span></td> 
-					<td class="sale3" data-name="sale3"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="name" data-name="Buy"><span>32.90</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="buy" data-name="Sell"><span>45.95</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="sale1" data-name="Buy_Price"><span class="sale1__text">52.3</span></td>
+					<td class="price1" data-name="Profit_buy"><span class="price1__text">+12.0</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
+					<td class="price2" data-name="Sell_Price"><span class="price2__text">27.9</span></td> 
+					<td class="sale3" data-name="Profit_sell"><span class="sale3__text">+23</span><img class="icon" src="image/Content/Table_ico/Gold_ico.png"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -296,8 +332,8 @@
 <a href="#top"><button class="button_top"></button></a>
 </footer>
 <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="js/sort.js"></script>
-<script src="js/script.js"></script>  -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/workshop/sort.js"></script>
+<script src="js/script.js"></script> 
 </body>
 </html>
