@@ -420,6 +420,18 @@ $(document).ready(function(){
 	$('.form_button').click(function(){
 		sort();
 	});
+	$('.fraction_footer_clear').click(function(){
+		$('ul.menu_category>a>li').removeClass('active');
+		$('ul.menu_category>a:last-child>li').addClass('active');
+		$('input#regexp').val('');
+		$('ul.menu_rar>a>li').removeClass('active');
+		// $('ul.fraction_menu>a').removeClass('button_a--active');
+		// $('ul.fraction_menu>a:first-child').addClass('button_a--active');
+		$('body').find('ul.pagin_ul>li').removeClass('active');
+		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
+		$('select[name=list1]>option:first-child').prop('selected','true');
+		sort();
+	});
 	$('input#regexp').keyup(function(){
 		$('body').find('ul.pagin_ul>li').removeClass('active');
 		$('body').find('ul.pagin_ul>li:first-child').addClass('active');
