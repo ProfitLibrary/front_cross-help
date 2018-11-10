@@ -1,0 +1,103 @@
+.header_background{
+	&__404--ru {
+		background-image: url(../image/header/main_header/Background-Header-404-rus.jpg) ;
+		background-size:100% 100%;
+		background-repeat: no-repeat;
+	}
+	&__404--en {
+		background-image: url(../image/header/main_header/Background-Header-404-eng.jpg) ;
+		background-size:100% 100%;
+		background-repeat: no-repeat;
+	}
+}	 
+.main_fraction--404{
+	background: url(../image/404/Scrish-tired-img.png) no-repeat;
+	background-position: 54.6vw 12vw;
+	background-size: 13.125vw 17.447916666667vw;
+	background-color: rgba(22, 22, 22, .55);
+	.return{
+		position: relative;
+		display: flex;
+		width: 28.073vw;
+		height: 4.063vw;
+		padding-top: 1.042vw;
+		background: url(../image/403/Darking-line.png) no-repeat;
+		background-position: 0 1vw;
+		z-index: 1;
+		&__back{
+			width: 14vw;
+			height: 3vw;
+			padding-top: 0.3vw;
+			transform: translateY(0.3vw);
+			overflow: hidden;
+			&:hover .return__icon--arrow{
+				width: 2.135vw;
+				height: 3.021vw;
+				margin-right: 1.3vw;
+				transform: translateY(-1vw) translateX(-0.32vw);
+				cursor: pointer;
+				background: url(../image/403/Arrow-Backup-active.png) no-repeat;
+				background-size: 2.135vw 3.021vw;
+			}
+		}
+		&__icon{
+			width: 2.55vw;
+			height: 2.76vw;
+			margin-right: 0.885vw;
+			transform: translateY(-0.14vw);
+		}
+		&__wrap_icon{
+			transform: translateY(0.9vw) translateX(1vw);
+		}
+		&__icon--arrow{
+			width: 2.135vw;
+			height: 3.021vw;
+			margin: 0;
+			margin-right: 1.3vw;
+			transform: translateY(-0.64vw) translateX(0.05vw);
+			background: url(../image/403/Arrow-Backup-no-active.png) no-repeat;
+			background-size: 1.458vw 2.292vw;	
+		}
+		&__text{
+			margin: 0;
+			color: #fefefe;
+			font-family: 'Exo 2', sans-serif; 	
+			font-size: 1.25vw;
+			font-weight: 400;
+		}
+	}
+	.main_fraction__wrap{
+		position: relative;
+		display: flex;
+		width: 59.219vw;
+		height: 41.146vw;
+		padding-top: 1.354vw;
+		padding-left: 2.552vw;
+		.main_fraction__main_img{
+			width: 42vw;
+			height: 41vw;
+			transform: translateY(-4vw) translateX(-2vw);
+		}
+		.main_fraction__text--h1{
+			margin-top: 3.5vw;
+			text-align: center;
+			font-family: "Adi_Script";
+			font-size: 5.5vw;
+			font-weight: 400;
+			background-image: -webkit-linear-gradient(bottom left, rgba(93, 93, 93, 1), rgba(207, 206, 206, 1));;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: #fff;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+.line_gorizontal{
+	width: 27.708vw;
+	height: 1.51vw;
+	margin: 0 auto;
+	margin-top: 16.823vw;
+	margin-bottom: 3.646vw;
+	background: url(../image/403/Decoration-Line-l.png) no-repeat;
+	background-size: 100%;
+}
