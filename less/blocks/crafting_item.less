@@ -1,9 +1,67 @@
+.characteristics_list__icon{
+	&--durability{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_durability.png) no-repeat;
+		background-size: 1.25vw 1.25vw;
+		background-position: left center;
+	}
+	&--energy_drain{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_energy_drain.png) no-repeat;
+		background-size: 1.25vw 1.25vw;
+		background-position: left center;
+	}
+	&--mass{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_mass.png) no-repeat;
+		background-size: 1.25vw 1.25vw;
+		background-position: left center;
+	}
+	&--blast_radius{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_blast_radius.png) no-repeat;
+		background-size: 1.51vw 1.406vw;
+		background-position: left center;
+	}
+	&--cooling_time{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_cooling_time.png) no-repeat;
+		background-size: 1.458vw 1.563vw;
+		background-position: left center;
+	}
+	&--damage{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_damage.png) no-repeat;
+		background-size: 1.719vw 1.302vw;
+		background-position: left center;
+	}
+	&--deployment_time{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_deployment_time.png) no-repeat;
+		background-size: 1.51vw 1.458vw;
+		background-position: left center;
+	}
+	&--dps{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_dps.png) no-repeat;
+		background-size: 1.198vw 1.354vw;
+		background-position: left center;
+	}
+	&--operating_time{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_operating_time.png) no-repeat;
+		background-size: 1.615vw 1.563vw;
+		background-position: left center;
+	}
+	&--queue_length{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_queue_length.png) no-repeat;
+		background-size: 1.198vw 1.042vw;
+		background-position: left center;
+	}
+	&--recharge{
+		background: url(../public/crafting_item/img/icon/characteristic/weapons/item_icon_recharge.png) no-repeat;
+		background-size: 1.458vw 1.094vw;
+		background-position: left center;
+	}
+}
+
 .fraction_menu__button--ivet{
 	width: 5.8vw;
 }
 .fraction--crafting_item{
 	padding: 0;
-	padding-left: 69px;
+	padding-left: 3.594vw;
 	background-color: rgba(22, 22, 22, .5)
 }	
 .fraction_content--crafting_item{	
@@ -75,13 +133,15 @@
 }
 
 .item{
+	display: flex;
 	.item_description{
-		width: 414px;
+		width: 21.563vw;
+		padding-top: 1.823vw;
 		display: flex;
 		flex-wrap: wrap;
 		&__img{
-			width: 50px;
-			height: 56px;
+			width: 2.604vw;
+			height: 2.917vw;
 			background: url(../public/crafting_item/img/icon/Pulsed-Accelerators.png) no-repeat;
 			background-size: cover;
 		}
@@ -89,87 +149,89 @@
 
 		}
 		&__name{
+			margin-left: 0.573vw;
 			color: #ff6600;
-			font-family: "Myriad Pro";
-			font-size: 31px;
+			font-family: Myriad Pro Regular;
+			font-size: 1.615vw;
 			font-weight: 400;
 		}
 		&__name_description{
+			margin-left: 0.573vw;
 			color: #a9a9a9;
-			font-family: "Exo 2.0";
-			font-size: 18px;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 0.938vw;
 			font-weight: 400;
 		}
 		&__additional_description{
-			width: 411px;
-			margin-top: 19px;
-			margin-bottom: 20px;
+			width: 21.406vw;
+			margin-top: 0.99vw;
+			margin-bottom: 0.521vw;
 			color: #ffffff;
-			font-family: "Exo 2.0";
-			font-size: 18px;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 0.938vw;
 			font-weight: 300;
 		}
 		&__rating{
-			margin-bottom: 16px;
 			color: #ff6600;
-			font-family: "Exo 2.0- Regular";
-			font-size: 27px;
-			font-weight: 400;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 1.094vw;
+			font-weight: 500;
 		}
 		&__rating_value{
 			color: #ff6600;
-			font-family: "Exo 2.0- Semi Bold";
-			font-size: 36px;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 1.875vw;
 			font-weight: 600;
 		}
 	}
 	.item_characteristics{
-		width: 414px;
+		width: 21.563vw;
 		display: flex;
 		flex-wrap: wrap;
 		hr{
-			width: 414px;
+			width: 21.563vw;
 			height: 1px;
 			background-color: #818181;
 		}
 		&__type_damage{
+			height: 2vw;
 			display: flex;
+			align-items: center;
 		}
 		&__type_damage_icon{
-			width: 25px;
-			height: 26px;
+			width: 1.302vw;
+			height: 1.354vw;
 			background: url(../public/crafting_item/img/icon/fire-damage.png) no-repeat;
 			background-size: cover;
 		}
 		&__type_damage_text{
-			margin-top: 23px;
-			margin-bottom: 16px;
+			margin-left: 0.833vw;
 			color: #fffefe;
-			font-family: "Exo 2.0";
-			font-size: 18px;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 0.938vw;
 			font-weight: 400;
 		}
 		.characteristics_list{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 414px;
+			width: 21.563vw;
 			display: flex;
 			flex-wrap: wrap;
 			&__text{
-				height: 36px;
+				height: 1.51vw;
 				color: #fffefe;
-				font-family: "Exo 2.0";
-				font-size: 18px;
+				font-family: 'Exo 2', sans-serif;
+				font-size: 0.938vw;
 				font-weight: 400;
-				line-height: 36px;
+				line-height: 1.25vw;
 			}
 			.progress_bar{
 				display: flex;
 				&__cell{
-					width: 20px;
-					height: 7px;
-					margin-left: 2px;	
+					width: 1.042vw;
+					height: 0.365vw;
+					margin-left: 0.104vw;	
 					background-color: #727068;
 				}
 				&__filling{
@@ -182,45 +244,134 @@
 				}
 			}
 			&__wrap{
-				width: 6vw;
+				width: 11.4vw;
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 			}
 			&__icon{
-				width: 30px;
-				height: 30px;
-				background: url(../public/crafting_item/img/icon/characteristic/17.png) no-repeat;
-				background-size: 16px 19px;
-				background-position: left center;
+				width: 1.8vw;
+				height: 1.563vw;
 			}
 			&__value{
 				color: #fffefe;
-				font-family: "Exo 2.0- Bold";
-				font-size: 27px;
+				font-family: 'Exo 2', sans-serif;
+				font-size: 1.406vw;
 				font-weight: 700;
+				span{
+					font-size: 0.938vw;
+					font-weight: 400;
+				}
 			}
+		}
+		&__last_line{
+			margin-top: 1.198vw;
 		}
 	}
 	.item_peculiarity{
+		&__wrap{
+			display: flex;
+		}
 		&__icon{
-			width: 25px;
-			height: 26px;
+			width: 1.563vw;
+			height: 1.563vw;
+			margin-top: 0.781vw;
 			background: url(../public/crafting_item/img/icon/peculiarity.png) no-repeat;
 			background-size: cover;
 		}
 		&__description{
-			width: 325px;
+			width: 17.604vw;
+			padding-top: 0.469vw;
+			padding-left: 0.677vw;
 			color: #f9df9a;
-			font-family: "Exo 2.0";
-			font-size: 18px;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 0.938vw;
 			font-weight: 300;
 		}
 		&__more{
+			&:hover{
+				background: url(../public/crafting_item/img/icon/Arrow-Backup-active-r.png) no-repeat;
+				background-position: right center;
+				background-size: 2.083vw 3.021vw;
+			}
+			width: 11.25vw;
+			height: 2.813vw;
+			transform: translateX(10.417vw) translateY(0.729vw);
+			text-align: left;
 			color: #fbc498;
-			font-family: "Myriad Pro";
-			font-size: 32px;
+			font-family: Myriad Pro Regular;
+			font-size: 1.667vw;
 			font-weight: 400;
+			line-height: 2.813vw;
+			background: url(../public/crafting_item/img/icon/Arrow-Backup-no-active-r.png) no-repeat;
+			background-position: 9.55vw center;
+			background-size: 1.458vw 2.292vw;
+		}
+	}
+	.item_prices{
+		transform: translateX(2.1vw) translateY(0.1vw);
+		hr{
+			width: 721px;
+			height: 1px;
+			background-color: #818181;
+		}
+		.item_prices_text{
+			display: flex;
+			justify-content: space-around;
+			width: 721px;
+			color: #ffdba8;
+			font-family: "Myriad Pro Regular";
+			font-size: 24px;
+			font-weight: 400;
+			&__popularity{
+
+			}
+			&__sell{
+
+			}
+			&__buy{
+
+			}
+		}
+		.item_prices_value{
+			display: flex;
+			justify-content: flex-start;
+			color: #ffffff;
+			font-family: "FranckerCYR - Condensed Medium";
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 2.5vw;
+			&__popularity{
+				width: 17.4vw;
+				text-align: center;
+				color: #c0feea;
+				font-family: "FranckerCYR - Condensed Medium";
+				font-size: 24px;
+				font-weight: 400;
+			}
+			&__icon_money{
+				display: block;
+				width: 1.198vw;
+				height: 1.25vw;
+				margin-left: 0.313vw;
+				transform: translateY(-0.1vw);
+			}
+			&__sell{
+				width: 10vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #ffffff;
+				font-family: "FranckerCYR - Condensed Medium";
+				font-size: 24px;
+				font-weight: 400;
+			}
+			&__buy{
+				width: 10.5vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 		}
 	}
 }
