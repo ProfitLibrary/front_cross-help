@@ -1,0 +1,233 @@
+.fraction_menu__button--ivet{
+	width: 5.8vw;
+}
+.fraction--crafting_item{
+	padding: 0;
+	padding-left: 69px;
+	background-color: rgba(22, 22, 22, .5)
+}	
+.fraction_content--crafting_item{	
+	display: block;
+	width: 64.063vw;
+	img{
+		height: auto;
+	}
+	.return{
+		position: relative;
+		display: flex;
+		width: 28.073vw;
+		height: 4.063vw;
+		padding-top: 1.042vw;
+		transform: translateX(-3.65vw);
+		background: url(../image/403/Darking-line.png) no-repeat;
+		background-position: -8vw 1vw;
+		background-size: cover;
+		z-index: 1;
+		&__back{
+			width: 17vw;
+			height: 3vw;
+			padding-top: 0.3vw;
+			transform: translateY(0.3vw);
+			overflow: hidden;
+			&:hover .return__icon--arrow{
+				width: 2.135vw;
+				height: 3.021vw;
+				margin-right: 1.3vw;
+				transform: translateY(-1vw) translateX(-0.32vw);
+				cursor: pointer;
+				background: url(../image/403/Arrow-Backup-active.png) no-repeat;
+				background-size: 2.135vw 3.021vw;
+			}
+		}
+		&__icon{
+			width: 2.864583333333vw;
+			height: 2.604166666667vw;
+			transform: translateX(-0.4vw);
+		}
+		&__wrap_icon{
+			transform: translateY(0.9vw) translateX(1vw);
+		}
+		&__icon--arrow{
+			width: 2.135vw;
+			height: 3.021vw;
+			margin: 0;
+			margin-right: 1.3vw;
+			transform: translateY(-0.64vw) translateX(0.05vw);
+			background: url(../image/403/Arrow-Backup-no-active.png) no-repeat;
+			background-size: 1.458vw 2.292vw;	
+		}
+		&__text{
+			margin: 0;
+			margin-top: 0.15vw;
+			color: #fefefe;
+			font-family: 'Exo 2', sans-serif; 	
+			font-size: 1.25vw;
+			font-weight: 400;
+			line-height: 1vw;
+			span{
+				margin-top: 0;
+				color: #f4f3f3;
+				font-family: 'Exo 2', sans-serif; 	
+				font-size: 0.9375vw;
+			}
+		}
+	}
+}
+
+.item{
+	.item_description{
+		width: 414px;
+		display: flex;
+		flex-wrap: wrap;
+		&__img{
+			width: 50px;
+			height: 56px;
+			background: url(../public/crafting_item/img/icon/Pulsed-Accelerators.png) no-repeat;
+			background-size: cover;
+		}
+		&__wrap_name{
+
+		}
+		&__name{
+			color: #ff6600;
+			font-family: "Myriad Pro";
+			font-size: 31px;
+			font-weight: 400;
+		}
+		&__name_description{
+			color: #a9a9a9;
+			font-family: "Exo 2.0";
+			font-size: 18px;
+			font-weight: 400;
+		}
+		&__additional_description{
+			width: 411px;
+			margin-top: 19px;
+			margin-bottom: 20px;
+			color: #ffffff;
+			font-family: "Exo 2.0";
+			font-size: 18px;
+			font-weight: 300;
+		}
+		&__rating{
+			margin-bottom: 16px;
+			color: #ff6600;
+			font-family: "Exo 2.0- Regular";
+			font-size: 27px;
+			font-weight: 400;
+		}
+		&__rating_value{
+			color: #ff6600;
+			font-family: "Exo 2.0- Semi Bold";
+			font-size: 36px;
+			font-weight: 600;
+		}
+	}
+	.item_characteristics{
+		width: 414px;
+		display: flex;
+		flex-wrap: wrap;
+		hr{
+			width: 414px;
+			height: 1px;
+			background-color: #818181;
+		}
+		&__type_damage{
+			display: flex;
+		}
+		&__type_damage_icon{
+			width: 25px;
+			height: 26px;
+			background: url(../public/crafting_item/img/icon/fire-damage.png) no-repeat;
+			background-size: cover;
+		}
+		&__type_damage_text{
+			margin-top: 23px;
+			margin-bottom: 16px;
+			color: #fffefe;
+			font-family: "Exo 2.0";
+			font-size: 18px;
+			font-weight: 400;
+		}
+		.characteristics_list{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 414px;
+			display: flex;
+			flex-wrap: wrap;
+			&__text{
+				height: 36px;
+				color: #fffefe;
+				font-family: "Exo 2.0";
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 36px;
+			}
+			.progress_bar{
+				display: flex;
+				&__cell{
+					width: 20px;
+					height: 7px;
+					margin-left: 2px;	
+					background-color: #727068;
+				}
+				&__filling{
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+				}
+				&__cell:last-child .progress_bar__filling{
+					width: 50%;
+				}
+			}
+			&__wrap{
+				width: 6vw;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			&__icon{
+				width: 30px;
+				height: 30px;
+				background: url(../public/crafting_item/img/icon/characteristic/17.png) no-repeat;
+				background-size: 16px 19px;
+				background-position: left center;
+			}
+			&__value{
+				color: #fffefe;
+				font-family: "Exo 2.0- Bold";
+				font-size: 27px;
+				font-weight: 700;
+			}
+		}
+	}
+	.item_peculiarity{
+		&__icon{
+			width: 25px;
+			height: 26px;
+			background: url(../public/crafting_item/img/icon/peculiarity.png) no-repeat;
+			background-size: cover;
+		}
+		&__description{
+			width: 325px;
+			color: #f9df9a;
+			font-family: "Exo 2.0";
+			font-size: 18px;
+			font-weight: 300;
+		}
+		&__more{
+			color: #fbc498;
+			font-family: "Myriad Pro";
+			font-size: 32px;
+			font-weight: 400;
+		}
+	}
+}
+
+.fraction_content--crafting_item .Line_decoration_table{
+	width: 27.708vw;
+	margin: 0 auto;
+	margin-top: 5.938vw;
+	margin-bottom: 4.896vw;
+}
