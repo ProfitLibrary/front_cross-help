@@ -73,7 +73,7 @@
 										<div class="item_characteristics__type_damage_text">Огнестрельный урон</div>
 									</div>
 									<hr>
-									<div class="characteristics_list">
+									<div data-percent="95" class="characteristics_list percent percent--damage">
 										<div class="characteristics_list__text">Урон</div>
 										<div class="progress_bar">
 											<div class="progress_bar__cell">
@@ -108,7 +108,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div data-percent="23" class="characteristics_list percent percent--fire_rate">
 										<div class="characteristics_list__text">Скорострельность</div>
 										<div class="progress_bar">
 											<div class="progress_bar__cell">
@@ -143,7 +143,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div data-percent="48" class="characteristics_list percent percent--3">
 										<div class="characteristics_list__text">Дальность</div>
 										<div class="progress_bar">
 											<div class="progress_bar__cell">
@@ -178,7 +178,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div data-percent="20" class="characteristics_list percent percent--4">
 										<div class="characteristics_list__text">Точность</div>
 										<div class="progress_bar">
 											<div class="progress_bar__cell">
@@ -213,7 +213,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div cdata-percent="50" lass="characteristics_list percent percent--5">
 										<div class="characteristics_list__text">Время пдо перегрева</div>
 										<div class="progress_bar">
 											<div class="progress_bar__cell">
@@ -248,27 +248,27 @@
 											</div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div class="characteristics_list characteristics_list--max_ammo">
 										<div class="characteristics_list__text">Боезапас</div>
 										<div class="characteristics_list__wrap">
 											<div class="characteristics_list__value">12 <span>шт.</span></div>
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div class="characteristics_list characteristics_list--durability">
 										<div class="characteristics_list__text">Прочность</div>
 										<div class="characteristics_list__wrap">
 											<div class="characteristics_list__icon characteristics_list__icon--durability"></div>
 											<div class="characteristics_list__value">552 <span>ед.</span></div>										
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div class="characteristics_list characteristics_list--energy_drain">
 										<div class="characteristics_list__text">Расход инергии</div>
 										<div class="characteristics_list__wrap">
 											<div class="characteristics_list__icon characteristics_list__icon--energy_drain"></div>
 											<div class="characteristics_list__value">6 <span>ед.</span></div>										
 										</div>
 									</div>
-									<div class="characteristics_list">
+									<div class="characteristics_list characteristics_list--mass">
 										<div class="characteristics_list__text">Масса</div>
 										<div class="characteristics_list__wrap">
 											<div class="characteristics_list__icon characteristics_list__icon--mass"></div>
@@ -287,26 +287,107 @@
 									</a>
 								</div> <!-- //item_peculiarity -->
 							</div> <!-- //item_wrap_description -->
-							<div class="item_prices">
-								<div class="item_prices_text">
-									<div class="item_prices_text__popularity">Предложение/Спрос</div>
-									<div class="item_prices_text__sell">Продажа</div>
-									<div class="item_prices_text__buy">Покупка</div>
-								</div>
-								<hr>
-								<div class="item_prices_value">
-									<div class="item_prices_value__popularity">16/39</div>
-									<div class="item_prices_value__sell">
-										58839,93
-										<img src="public/crafting_item/img/icon/Gold-ico.png" alt="" class="item_prices_value__icon_money">
+
+							<div class="item_main">
+
+								<div class="item_main_prices">
+									<div class="item_main_prices_text">
+										<div class="item_main_prices_text__popularity">Предложение/Спрос</div>
+										<div class="item_main_prices_text__sell">Продажа</div>
+										<div class="item_main_prices_text__buy">Покупка</div>
 									</div>
-									<div class="item_prices_value__buy">
-										56139,37
-										<img src="public/crafting_item/img/icon/Gold-ico.png" alt="" class="item_prices_value__icon_money">
+									<hr class="item_main_prices__hr_top">
+									<div class="item_main_prices_value">
+										<div class="item_main_prices_value__popularity">16/39</div>
+										<div class="item_main_prices_value__sell">
+											58839,93
+											<img src="public/crafting_item/img/icon/Gold-ico.png" alt="" class="item_main_prices_value__icon_money">
+										</div>
+										<div class="item_main_prices_value__buy">
+											56139,37
+											<img src="public/crafting_item/img/icon/Gold-ico.png" alt="" class="item_main_prices_value__icon_money">
+										</div>
 									</div>
-								</div>
-								<hr>
-							</div>
+									<hr class="item_main_prices__hr_bootom">
+								</div> <!-- //item_prices -->
+
+								<div class="item_main_img"><img src="public/crafting_item/img/item/741.png" alt=""></div>
+
+								<img class="Line_decoration_table" src="image/crafting/Line-decoration-gorizontal-2.png" alt="">
+
+								<div class="item_main_component_wrap">
+									<img src="public/crafting_item/img/icon/impact.png" alt="" class="item_main__impact">
+									<div class="item_main__impact_text">На деталь воздействуют</div>
+									<div class="item_main_component">
+										<div class="item_main_component__img item_main_component__img--РадЛОЛ">
+											<p class="item_main_component__text">Радиаторы</p>
+											<img src="public/crafting_item/img/item/765.png" alt="">
+										</div>
+										<div class="item_main_component__img item_main_component__img--РадЛОЛ">
+											<p class="item_main_component__text">Охладители</p>
+											<img src="public/crafting_item/img/item/766.png" alt="">
+										</div>
+										<div class="item_main_component__img item_main_component__img--РадЛОЛ">
+											<p class="item_main_component__text">Двигатель</p>
+											<img src="public/crafting_item/img/item/767.png" alt="">
+										</div>
+									</div> <!-- //item_main_component -->
+								</div>		<!-- //item_main_component_wrap -->
+
+								<div class="item_main_characteristics">
+									<div class="item_characteristics">
+
+										<hr>
+										<div class="characteristics_list characteristics_list--dps">
+											<div class="characteristics_list__text">ДПС</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--dps"></div>
+												<div class="characteristics_list__value">69 <span>ед.</span></div>
+											</div>
+										</div>
+
+										<div class="characteristics_list characteristics_list--recharge">
+											<div class="characteristics_list__text">Перезарядка</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--recharge"></div>
+												<div class="characteristics_list__value">5 <span>сек.</span></div>			
+											</div>
+										</div>
+
+										<div class="characteristics_list characteristics_list--queue_length">
+											<div class="characteristics_list__text">Длинна очереди</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--queue_length"></div>
+												<div class="characteristics_list__value">1 <span>выстрел</span></div>						
+											</div>
+										</div> 
+
+										<div class="characteristics_list characteristics_list--damage">
+											<div class="characteristics_list__text">Урон</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--damage"></div>
+												<div class="characteristics_list__value">329 <span>ед.</span></div>				
+											</div>
+										</div>
+
+										<div class="characteristics_list characteristics_list--blast_radius">
+											<div class="characteristics_list__text">Радиус взрыва</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--blast_radius"></div>
+												<div class="characteristics_list__value">3 <span>кл.</span></div>			
+											</div>
+										</div>
+
+										<div class="characteristics_list characteristics_list--cooling_time">
+											<div class="characteristics_list__text">Время охлаждения</div>
+											<div class="characteristics_list__wrap">
+												<div class="characteristics_list__icon characteristics_list__icon--cooling_time"></div>
+												<div class="characteristics_list__value">3 <span>кл.</span></div>			
+											</div>
+										</div>
+									</div> <!-- //item_characteristics -->
+								</div> <!-- //item_main_characteristics -->
+							</div> <!-- //item_main -->
 
 						</div> <!-- //item -->
 
@@ -318,7 +399,7 @@
 					<div class="footer_last__content">
 						<div class="footer_top">
 							<div class="footer_top__news"><a class="footer_top__news_a name_color_browen" href="">Новости</a>
-							<a class="footer_top__news_a" href="">Информация по обновлению<br>Crossout 0.9.130</a><a class="footer_top__news_a " href="">Вопросы и ответы</a></div>
+							<a class="footer_top__news_a" href="">Информация по обновлению<br>Crossout 0.9.130</a><a class="footer_top__news_a" href="">Вопросы и ответы</a></div>
 							<div class="footer_top__help"><a class="footer_top__help_a name_color_browen" href="">Поддержка</a>
 							<a class="footer_top__help_a" href="">Поддержать проект</a>
 							<a class="footer_top__help_a" href="">Сотрудничество</a>
@@ -351,5 +432,7 @@
 						<a href="#top"><button class="button_top"></button></a>
 					</footer>
 					<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+					<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+					<script src="js/crafting_item/script.js"></script>
 				</body>
 			</html>
