@@ -1,57 +1,109 @@
-.characteristics_list__icon{
-	&--durability{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_durability.png) no-repeat;
-		background-size: 1.21vw 1.21vw;
+.characteristics_list{
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/cooling_time.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}	
+	&--blast_radius
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/blast_radius.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--energy_drain{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_energy_drain.png) no-repeat;
-		background-size: 1.21vw 1.21vw;
+	&--recharge
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/recharge.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--mass{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_mass.png) no-repeat;
-		background-size: 1.21vw 1.21vw;
+	&--damage
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/damage.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--blast_radius{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_blast_radius.png) no-repeat;
-		background-size: 1.47vw 1.402vw;
+	&--deployment_time
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/deployment_time.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--cooling_time{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_cooling_time.png) no-repeat;
-		background-size: 1.454vw 1.559vw;
+	&--queue_length
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/queue_length.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--damage{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_damage.png) no-repeat;
-		background-size: 1.715vw 1.298vw;
+		&--operating_time
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/operating_time.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--deployment_time{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_deployment_time.png) no-repeat;
-		background-size: 1.47vw 1.454vw;
+	&--mass
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/mass.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--dps{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_dps.png) no-repeat;
-		background-size: 1.194vw 1.350vw;
+	&--energy_drain
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/energy_drain.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--operating_time{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_operating_time.png) no-repeat;
-		background-size: 1.611vw 1.579vw;
+	&--durability
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/durability.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--queue_length{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_queue_length.png) no-repeat;
-		background-size: 1.195vw 1.038vw;
+	&--dps
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/dps.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
-	&--recharge{
-		background: url(../image/crafting_item/icon/characteristic/weapons/item_icon_recharge.png) no-repeat;
-		background-size: 1.454vw 1.09vw;
+	&--rollback_time
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/rollback_time.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a1
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/1.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a2
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/2.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a3
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/3.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a4
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/4.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a5
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/5.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
+	&--a6
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/6.png) no-repeat;
+		background-size: contain;
 		background-position: left center;
 	}
 }
@@ -136,6 +188,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	.item_description{
+
 		width: 21.563vw;
 		padding-top: 1.823vw;
 		display: flex;
@@ -193,6 +246,8 @@
 		hr{
 			width: 21.563vw;
 			height: 1px;
+			// -webkit-margin-before: 0em;
+			// -webkit-margin-after: 0em;
 			margin: 0.45vw 0;
 			background-color: #818181;
 		}
@@ -290,10 +345,14 @@
 		}
 		&__more{
 			&:hover{
+				color: #f7ab6d;
 				cursor: pointer;
 				background: url(../image/crafting_item/icon/Arrow-Backup-active-r.png) no-repeat;
 				background-position: right center;
 				background-size: contain;
+			}
+			&:active{
+				opacity: 0.7;
 			}
 			width: 11.25vw;
 			height: 2.813vw;
@@ -329,7 +388,9 @@
 			hr{
 				width: 37.552vw;
 				height: 1px;
-				margin: 0.3vw 0;
+				// -webkit-margin-before: 0em;
+				// -webkit-margin-after: 0em;
+				margin: 0.45vw 0;
 				background-color: #818181;
 			}
 			.item_main_prices_text{
@@ -393,15 +454,15 @@
 		}
 		&_img{
 			width: 26.51vw;
-			height: 24.2vw;
+			height: 23.65vw;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			img{
 				width: auto;
 				height: auto;
-				max-width: 24vw;
-				max-height: 24vw
+				max-width: 23vw;
+				max-height: 23vw
 			}
 		}
 		.Line_decoration_table{
@@ -464,7 +525,9 @@
 					width: 10vw;
 				}
 				&__icon{
-					width: 2vw;
+					width: 1.5vw;
+					height: 1.5vw;
+					margin-right: 0.677vw;
 				}
 			}
 		}
