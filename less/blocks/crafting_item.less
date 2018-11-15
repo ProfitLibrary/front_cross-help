@@ -70,6 +70,12 @@
 		background-size: contain;
 		background-position: left center;
 	}
+	&--rating
+	.characteristics_list__icon{
+		background: url(../image/crafting_item/icon/characteristic/rating.png) no-repeat;
+		background-size: contain;
+		background-position: left center;
+	}
 	&--a1
 	.characteristics_list__icon{
 		background: url(../image/crafting_item/icon/characteristic/1.png) no-repeat;
@@ -105,6 +111,85 @@
 		background: url(../image/crafting_item/icon/characteristic/6.png) no-repeat;
 		background-size: contain;
 		background-position: left center;
+	}
+}
+
+.item_characteristics
+.item_characteristics__type{
+		&--damage
+		.item_characteristics__type_icon{
+			width: 1.719vw;
+			height: 1.719vw;
+			background: url(../image/crafting_item/icon/characteristic/fire-damage.png) no-repeat;
+			background-size: contain;
+		}
+		&--rating
+		.item_characteristics__type_icon{
+			width: 1.719vw;
+			height: 1.719vw;
+			background: url(../image/crafting_item/icon/characteristic/rating.png) no-repeat;
+			background-size: contain;
+		}
+	}
+
+
+.item{
+	.item_wrap_description{
+		.item_description--epic{
+			.item_description__name{
+				color: #b900ff;
+			}
+			.item_description__rating{
+				color: #b900ff;
+			}
+			.item_description__rating_value{
+				color: #b900ff;
+			}
+		}
+		.item_description--common{
+			.item_description__name{
+				color: #fff;
+			}
+			.item_description__rating{
+				color: #fff;
+			}
+			.item_description__rating_value{
+				color: #fff;
+			}
+		}
+		.item_description--rare{
+			.item_description__name{
+				color: #0066cc;
+			}
+			.item_description__rating{
+				color: #0066cc;
+			}
+			.item_description__rating_value{
+				color: #0066cc;
+			}
+		}
+		.item_description--legendary{
+			.item_description__name{
+				color: #ffa040;
+			}
+			.item_description__rating{
+				color: #ffa040;
+			}
+			.item_description__rating_value{
+				color: #ffa040;
+			}
+		}
+		.item_description--relic{
+			.item_description__name{
+				color: #ff6600;
+			}
+			.item_description__rating{
+				color: #ff6600;
+			}
+			.item_description__rating_value{
+				color: #ff6600;
+			}
+		}
 	}
 }
 
@@ -188,19 +273,17 @@
 	display: flex;
 	flex-wrap: wrap;
 	.item_description{
-
 		width: 21.563vw;
 		padding-top: 1.823vw;
 		display: flex;
 		flex-wrap: wrap;
 		&__img{
-			width: 2.604vw;
-			height: 2.917vw;
-			background: url(../image/crafting_item/icon/Pulsed-Accelerators.png) no-repeat;
-			background-size: cover;
+			img{
+				max-width: 2.917vw;
+				max-height: 2.917vw;
+			}
 		}
 		&__wrap_name{
-
 		}
 		&__name{
 			margin-left: 0.573vw;
@@ -251,18 +334,18 @@
 			margin: 0.45vw 0;
 			background-color: #818181;
 		}
-		&__type_damage{
+		&__type{
 			height: 2vw;
 			display: flex;
 			align-items: center;
 		}
-		&__type_damage_icon{
-			width: 1.302vw;
-			height: 1.354vw;
+		&__type_icon{
+			width: 1.719vw;
+			height: 1.719vw;
 			background: url(../image/crafting_item/icon/fire-damage.png) no-repeat;
-			background-size: cover;
+			background-size: contain;
 		}
-		&__type_damage_text{
+		&__type_text{
 			margin-left: 0.833vw;
 			color: #fffefe;
 			font-family: 'Exo 2', sans-serif;
