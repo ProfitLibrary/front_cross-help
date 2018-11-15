@@ -1,17 +1,7 @@
 .item.item--decor{
 	.item_description{
-		&__img{
-			img{
-			}
-		}
-		&__wrap_name{
-		}
 		&__name{
 			color: #9900d4;
-		}
-		&__name_description{
-		}
-		&__additional_description{
 		}
 		&__rating{
 			color: #9900d4;
@@ -21,78 +11,36 @@
 		}
 	}
 	.item_characteristics{
-		hr{
-		}
-		&__type_{
-		}
-		&__type_icon{
-		}
-		&__type_text{
+		&__last_line{
+			margin-top: 3vw;
 		}
 		.characteristics_list{
-			&__text{
-			}
-			&__wrap{
-			}
 			&__icon{
 				height: 1.25vw;
 			}
-			&__value{
-			span{
-				}
-			}
-		}
-		&__last_line{
-		}
-	}
-	.item_peculiarity{
-		&__wrap{
-		}
-		&__icon{
-		}
-		&__description{
 		}
 	}
 	.item_main{
-		.item_main_prices{
-			hr{
-			}
-			.item_main_prices_text{
-				&__popularity{
-				}
-				&__sell{
-				}
-				&__buy{
-				}
-			}
-			.item_main_prices_value{
-				&__popularity{
-				}
-				&__icon_money{
-				}
-				&__sell{
-				}
-				&__buy{
-				}
-			}
-		}
 		&_img{
-			transform: translateX(3vw);
-			img{
-			}
+			position: relative;
+			transform: translateX(3vw) translateY(-2vw);
 		}
-		.Line_decoration_table{
-		}
-		&_characteristics{
-			.characteristics_list{
-				&__wrap{
-				}
-				&__icon{
-				}
+		&_beep{
+			position: absolute;
+			bottom: 0;
+			left: 11vw;
+			&:hover{
+				cursor: pointer;
+				background: url(../image/crafting_item/icon/music_on.png) no-repeat;
+				background-size: contain;
 			}
+			&:active{
+				opacity: 0.7;
+			}
+			width: 4.948vw;
+			height: 4.583vw;
+			background: url(../image/crafting_item/icon/music_off.png) no-repeat;
+			background-size: contain;
 		}
 	}
-}
-
-.fraction_content--crafting_item .Line_decoration_table{
 }
