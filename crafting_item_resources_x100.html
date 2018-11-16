@@ -51,57 +51,36 @@
 							</a>
 						</div>
 						
-						<div class="item item--decor">
+						<div class="item item--decor item--resources">
 
 							<div class="item_wrap_description">
-								<div class="item_description item_description--epic">
+								<div class="item_description item_description--common">
 									<div class="item_description__img">
-										<img src="public/image/crafting_item/type_name/auto_cannon__epic.png" alt="">
+										<img src="public/image/crafting_item/type_name/123_common.png" alt="">
 									</div>
 									<div class="item_description__wrap_name">
-										<div class="item_description__name">Аншлаг 2</div>
-										<div class="item_description__name_description">Декор. Гудок</div>									
+										<div class="item_description__name">Пластик</div>
+										<div class="item_description__name_description">Ресурс</div>									
 									</div>
-									<div class="item_description__additional_description">Сложно переоценить фактор неожиданности при ведении боевых действий. Звучать будет последний установленный гудок.Повышает получаемую репутацию.</div>
+									<div class="item_description__additional_description">Пластиковый мусор оказался весьма востребован в новом мире. Непрочный, но податливый материал активно используется выжившими для различных целей.</div>
 									<div class="item_description__rating">
-										<span class="item_description__rating_value">17</span>	 
-										ОЧКИ МОЩИ
+										<div class="item_description__icon"><img src="public/image/crafting_item/icon/container_size.png" alt=""></div>
+										<span class="item_description__rating_value">Размер контейнера</span>
+										<div class="item_description__wrap_select">
+											<select class="item_description__select" onchange="if (this.value) window.location.href = this.value">
+												<option value="crafting_item_resources_x10.html">10</option>
+												<option value="crafting_item_resources_x100.html">100</option>
+											</select>
+										</div>
 									</div>
 								</div> <!-- //item_description -->
 								<div class="item_characteristics">
-									<hr>
-									<div class="item_characteristics__type item_characteristics__type--reputation">
-										<div class="item_characteristics__type_icon"></div>
-										<div class="item_characteristics__type_text">Дополнительная репутация</div>
-									</div>
-									<hr>
-									<div class="characteristics_list characteristics_list--power_reputation">
-										<div class="characteristics_list__text">Репутация</div>
-										<div class="characteristics_list__wrap">
-											<div class="characteristics_list__icon"></div>
-											<div class="characteristics_list__value">3 <span>%</span></div>
-										</div>
-									</div>
-									<div class="characteristics_list characteristics_list--durability">
-										<div class="characteristics_list__text">Прочность</div>
-										<div class="characteristics_list__wrap">
-											<div class="characteristics_list__icon"></div>
-											<div class="characteristics_list__value">3 <span>ед.</span></div>										
-										</div>
-									</div>
-									<div class="characteristics_list characteristics_list--mass">
-										<div class="characteristics_list__text">Масса</div>
-										<div class="characteristics_list__wrap">
-											<div class="characteristics_list__icon"></div>
-											<div class="characteristics_list__value">3 <span>кг</span></div>										
-										</div>
-									</div>
 									<hr class="item_characteristics__last_line">
 								</div> <!-- //item_characteristics -->
 								<div class="item_peculiarity">
 									<div class="item_peculiarity__wrap">
 										<div class="item_peculiarity__icon"></div>
-										<div class="item_peculiarity__description">Можно получить  через улучшение декора редкого типа, случайным образом при открытии ящика или купить на рынке.</div>		
+										<div class="item_peculiarity__description">Можно получить в рейдах средней сложности. <br>Купить на рынке.</div>		
 									</div>
 								</div> <!-- //item_peculiarity -->
 							</div> <!-- //item_wrap_description -->
@@ -116,13 +95,13 @@
 									</div>
 									<hr class="item_main_prices__hr_top">
 									<div class="item_main_prices_value">
-										<div class="item_main_prices_value__popularity">16/39</div>
+										<div class="item_main_prices_value__popularity">1/39</div>
 										<div class="item_main_prices_value__sell">
-											58839,93
+											59,93
 											<img src="public/image/crafting_item/icon/Gold-ico.png" alt="" class="item_main_prices_value__icon_money">
 										</div>
 										<div class="item_main_prices_value__buy">
-											56139,37
+											139,37
 											<img src="public/image/crafting_item/icon/Gold-ico.png" alt="" class="item_main_prices_value__icon_money">
 										</div>
 									</div>
@@ -130,8 +109,7 @@
 								</div> <!-- //item_prices -->
 
 								<div class="item_main_img">
-									<img src="public/image/crafting_item/item/782.png" alt="">
-									<div class="item_main_beep"></div>
+									<img src="public/image/crafting_item/item/784.png" alt="">
 								</div>
 							</div> <!-- //item_main -->
 
@@ -178,6 +156,22 @@
 						<a href="#top"><button class="button_top"></button></a>
 					</footer>
 					<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
-					<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+					<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+					<script src="js/crafting_item/jquery.selectric.min.js"></script>
+					<script>
+						$(document).ready(function(){
+							$('select').selectric();
+							$('select').prop('selectedIndex', 1).selectric('refresh');
+
+							$(".selectric").click(function() {
+							  if($(".selectric").hasClass("selectric--active")){
+							  	$(".selectric").removeClass("selectric--active");
+							  }
+							  else{
+							  	$(".selectric").addClass("selectric--active");
+							  }
+							});
+						});
+					</script>
 				</body>
 			</html>
